@@ -75,7 +75,7 @@ if (player isKindOf "rhsusf_army_ocp_crewman") then {
 //--------------------- Billboard Image Randomiser
 	Bill_1 setObjectTexture [0,"media\images\billboard2.paa"];
 	
-	_imageList2 = [1,3,4,5,6,7,8,9];
+	_imageList2 = [1,3,4,5,6,7,8,9,10];
 	_bill2 = _imageList2 call BIS_fnc_selectRandom;
 	if (_bill2 == 1) then {Bill_2 setObjectTexture [0,"media\images\billboard1.paa"]};
 	if (_bill2 == 3) then {Bill_2 setObjectTexture [0,"media\images\billboard3.paa"]};
@@ -85,6 +85,7 @@ if (player isKindOf "rhsusf_army_ocp_crewman") then {
 	if (_bill2 == 7) then {Bill_2 setObjectTexture [0,"media\images\billboard7.paa"]};
 	if (_bill2 == 8) then {Bill_2 setObjectTexture [0,"media\images\billboard8.paa"]};
 	if (_bill2 == 9) then {Bill_2 setObjectTexture [0,"media\images\billboard9.paa"]};
+	if (_bill2 == 10) then {Bill_2 setObjectTexture [0,"media\images\billboard10.paa"]};
 	
 //--------------------- Squad Url Hint
 

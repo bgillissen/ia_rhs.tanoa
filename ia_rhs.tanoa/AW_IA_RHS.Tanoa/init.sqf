@@ -32,6 +32,7 @@ call compile preprocessFile "scripts\radiofreq.sqf";							// TFAR RadioFreqs
 
 tf_no_auto_long_range_radio = true; 	//so player do not spawn with longrange radio as backpacks
 TF_give_microdagr_to_soldier = false; 	//so player do not have Dagr in theyr inventory
+TF_terrain_interception_coefficient = 1;
 
 //Advanced Sling Loading
 missionNamespace setVariable ["SA_ASL_HEAVY_LIFTING_ENABLED", false, true];

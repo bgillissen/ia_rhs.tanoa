@@ -32,13 +32,7 @@ if (_reward isKindOf "B_G_Offroad_01_repair_F") exitWith {
 	_mortar = "B_Mortar_01_F" createVehicle getMarkerPos apcPad1;
 	_mortar attachTo [_reward,[0,-2.5,.3]];
 };
-if (_reward isKindOf "Land_InfoStand_V1_F") exitWith {
-	deleteVehicle _reward;
-	_truck = "B_G_Offroad_01_repair_F" createVehicle getMarkerPos apcPad1;
-	_truck setDir _vicDir1;
-	_GMG = createVehicle ["B_GMG_01_high_F", getMarkerPos "smReward1",smMarkerList,0,"NONE"];
-	_GMG attachTo [_truck,[0,-2.5,.8]];
-};
+
 {
 	_x addCuratorEditableObjects [[_reward], false];
 } foreach adminCurators;

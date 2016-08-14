@@ -30,9 +30,6 @@ for [ {_i = 0}, {_i < count(paramsArray)}, {_i = _i + 1} ] do {
 
 //------------------- client executions
 
-//{_x addCuratorEditableObjects [[player],FALSE];} count allCurators;
-//{_x addCuratorEditableObjects [[player],FALSE];} foreach adminCurators;
-
 _null = [] execvm "scripts\vehicle\crew\crew.sqf"; 								// vehicle HUD
 //_null = [] execVM 'scripts\group_manager.sqf';								// group manager
 _null = [] execVM "scripts\restrictions.sqf"; 									// gear restrictions and safezone
@@ -60,7 +57,7 @@ if (PARAMS_HeliRope != 0) then {call compile preprocessFileLineNumbers "scripts\
 
 tawvd_disablenone = false;
 
-//--------------------- Arty Computer and Squad Manager
+//--------------------- Arty Computer
 
 enableEngineArtillery false;
 if (player isKindOf "rhsusf_army_ocp_fso") then {
@@ -70,22 +67,23 @@ if (player isKindOf "rhsusf_army_ocp_crewman") then {
 	enableEngineArtillery true;
 };
 
-["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
+//--------------------- Squad Manager
+["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups;
 
 //--------------------- Billboard Image Randomiser
-	Bill_1 setObjectTexture [0,"media\images\billboard2.paa"];
+Bill_1 setObjectTexture [0,"media\images\billboard2.paa"];
 	
-	_imageList2 = [1,3,4,5,6,7,8,9,10];
-	_bill2 = _imageList2 call BIS_fnc_selectRandom;
-	if (_bill2 == 1) then {Bill_2 setObjectTexture [0,"media\images\billboard1.paa"]};
-	if (_bill2 == 3) then {Bill_2 setObjectTexture [0,"media\images\billboard3.paa"]};
-	if (_bill2 == 4) then {Bill_2 setObjectTexture [0,"media\images\billboard4.paa"]};
-	if (_bill2 == 5) then {Bill_2 setObjectTexture [0,"media\images\billboard5.paa"]};
-	if (_bill2 == 6) then {Bill_2 setObjectTexture [0,"media\images\billboard6.paa"]};
-	if (_bill2 == 7) then {Bill_2 setObjectTexture [0,"media\images\billboard7.paa"]};
-	if (_bill2 == 8) then {Bill_2 setObjectTexture [0,"media\images\billboard8.paa"]};
-	if (_bill2 == 9) then {Bill_2 setObjectTexture [0,"media\images\billboard9.paa"]};
-	if (_bill2 == 10) then {Bill_2 setObjectTexture [0,"media\images\billboard10.paa"]};
+_imageList2 = [1,3,4,5,6,7,8,9,10];
+_bill2 = _imageList2 call BIS_fnc_selectRandom;
+if (_bill2 == 1) then {Bill_2 setObjectTexture [0,"media\images\billboard1.paa"]};
+if (_bill2 == 3) then {Bill_2 setObjectTexture [0,"media\images\billboard3.paa"]};
+if (_bill2 == 4) then {Bill_2 setObjectTexture [0,"media\images\billboard4.paa"]};
+if (_bill2 == 5) then {Bill_2 setObjectTexture [0,"media\images\billboard5.paa"]};
+if (_bill2 == 6) then {Bill_2 setObjectTexture [0,"media\images\billboard6.paa"]};
+if (_bill2 == 7) then {Bill_2 setObjectTexture [0,"media\images\billboard7.paa"]};
+if (_bill2 == 8) then {Bill_2 setObjectTexture [0,"media\images\billboard8.paa"]};
+if (_bill2 == 9) then {Bill_2 setObjectTexture [0,"media\images\billboard9.paa"]};
+if (_bill2 == 10) then {Bill_2 setObjectTexture [0,"media\images\billboard10.paa"]};
 	
 //--------------------- Squad Url Hint
 
@@ -96,14 +94,11 @@ _infoName = _infoArray select 1;
 _name = _infoName select 1; 
 _email = _infoSquad select 2;
 
-
 // replace line below with your Squad xml's email
-if (_email == "hello@taskforceunicorn.com") then {
-
-_GlobalHint = format["<t align='center' size='2.2' color='#FAAF3A'>%1<br/></t><t size='1.4' color='#33CCFF'>%2</t><br/>has joined the server, To become a TFU member, apply to taskforceunicorn.com</t><br/>",_squad,_name];
-
-[_GlobalHint] remoteExec ["AW_fnc_globalHint",0,false];
-} else {};
+if (_email == "rainmano@taskforceunicorn.com") then {
+	_GlobalHint = format["<t align='center' size='2.2' color='#FAAF3A'>%1<br/></t><t size='1.4' color='#33CCFF'>%2</t><br/>has joined the server, To become a TFU member, apply to taskforceunicorn.com</t><br/>",_squad,_name];
+	[_GlobalHint] remoteExec ["AW_fnc_globalHint",0,false];
+};
 
 
 

@@ -15,9 +15,9 @@ private ["_opticsAllowed","_specialisedOptics","_optics","_basePos","_firstRun",
 #define SNIPER_MSG "Only Snipers may use this weapon system. Sniper rifle removed."
 #define AUTOTUR_MSG "You are not allowed to use this weapon system, Backpack removed."
 #define UAV_MSG "Only UAV operator may use this Item, UAV terminal removed."
-#define OPTICS_MSG "Thermal optics are restricted to Squad Leaders. Optic removed."
-#define MG_MSG "Only Autoriflemen may use this weapon system. LMG removed."
-#define SOPT_MSG "SOS and LRPS are designated for Snipers and Spotters only. Optic removed."
+#define OPTICS_MSG "Thermal optics are restricted to Platoon/Squad/Team leaders. Optic removed."
+#define MG_MSG "Only Autoriflemen may use this weapon system. MG removed."
+#define SOPT_MSG "Long range optics are designated for Snipers/Spotters/Marksmans only. Optic removed."
 #define MRK_MSG "Only Marksman and Spotters may use this weapon system. Rifle removed."
 
 //===== UAV TERMINAL
@@ -71,10 +71,14 @@ _sniperSpecialised = ["srifle_GM6_F",
                       ];
 //===== SNIPER OPTICS
 _sniperTeam = ["rhsusf_army_ocp_sniper", 
-			   "rhsusf_army_ocp_jfo"
+			   "rhsusf_army_ocp_marksman",
+               "rhsusf_socom_marsoc_spotter"
 			   ];
 _sniperOpt = ["optic_SOS",
               "optic_LRPS",
+              "optic_AMS",
+              "optic_AMS_khk",
+              "optic_AMS_snd",
               "rhsusf_acc_LEUPOLDMK4",
               "rhsusf_acc_LEUPOLDMK4_2"
               ];
@@ -85,7 +89,8 @@ _opticsAllowed = ["rhsusf_usmc_marpat_d_squadleader",
                   ];
 _specialisedOptics = ["optic_Nightstalker",
                       "optic_tws",
-                      "optic_tws_mg"
+                      "optic_tws_mg",
+                      "optic_nvs"
                       ];
 //===== BACKPACKS
 _backpackRestricted = ["O_Mortar_01_support_F",
@@ -133,7 +138,9 @@ _backpackRestricted = ["O_Mortar_01_support_F",
                        //"RHS_SPG9_Tripod_Bag",
                        "O_AA_01_weapon_F"];
 //===== LMG
-_autoRiflemen = ["rhsusf_army_ocp_machinegunner","rhsusf_army_ocp_autorifleman"];
+_autoRiflemen = ["rhsusf_army_ocp_machinegunner",
+				 "rhsusf_army_ocp_autorifleman"
+				];
 _autoSpecialised = ["MMG_02_black_F",
                     "MMG_02_camo_F",
                     "MMG_02_sand_F",
@@ -158,8 +165,7 @@ _autoSpecialised = ["MMG_02_black_F",
 
 //===== MARKSMAN
 _marksman = ["rhsusf_army_ocp_marksman",            //marksman
-             "rhsusf_usmc_lar_marpat_wd_marksman",  //recon marksman
-             "rhsusf_army_ocp_jfo"                  //spotter
+             "rhsusf_socom_marsoc_spotter"          //scout spotter
              ];
 _marksmanGun = ["srifle_DMR_02_ACO_F",
                 "srifle_DMR_02_ARCO_F",

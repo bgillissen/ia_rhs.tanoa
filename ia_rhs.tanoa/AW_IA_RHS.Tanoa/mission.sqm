@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1766;
+		nextID=1769;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2309.074,51.267265,13188.583};
-		dir[]={0.28989941,-0.18481907,0.93917114};
-		up[]={0.054552265,0.98268795,0.17672972};
-		aside[]={0.95564806,6.784685e-007,-0.29497895};
+		pos[]={2295.4202,40.960594,13231.88};
+		dir[]={0.67936605,-0.12964928,0.72242057};
+		up[]={0.088924229,0.99146801,0.094560698};
+		aside[]={0.72858018,7.3367846e-007,-0.68515378};
 	};
 };
 binarizationWanted=0;
@@ -17393,6 +17393,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
+						init="(group this) setGroupId [""ALPHA""];";
 						name="ab_squadleader";
 						description="Squad Leader";
 						isPlayable=1;
@@ -17559,6 +17560,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						init="(group this) setGroupId [""ALPHA""];";
 						name="ab_medic2";
 						description="Medic";
 						isPlayable=1;
@@ -17698,6 +17700,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						init="(group this) setGroupId [""ALPHA""];";
 						name="ab_medic1";
 						description="Medic";
 						isPlayable=1;
@@ -17829,172 +17832,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2348.332,12.126266,13163.05};
-						angles[]={0.074525557,4.1132698,0.0026703537};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="CORPORAL";
-						init="(group this) setGroupId [""ALPHA""];";
-						name="a_teamleader";
-						description="Team Leader";
-						isPlayable=1;
-						class Inventory
-						{
-							class primaryWeapon
-							{
-								name="rhs_weap_m4a1_blockII_wd";
-								optics="optic_Nightstalker";
-								flashlight="rhsusf_acc_anpeq15A";
-								class primaryMuzzleMag
-								{
-									name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
-									ammoLeft=30;
-								};
-							};
-							class handgun
-							{
-								name="hgun_Pistol_heavy_01_F";
-								class primaryMuzzleMag
-								{
-									name="11Rnd_45ACP_Mag";
-									ammoLeft=11;
-								};
-							};
-							class binocular
-							{
-								name="lerca_1200_tan";
-							};
-							class uniform
-							{
-								typeName="rhs_uniform_g3_m81";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="11Rnd_45ACP_Mag";
-										count=3;
-										ammoLeft=11;
-									};
-									class Item1
-									{
-										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
-										count=1;
-										ammoLeft=30;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="rhsusf_spc_teamleader";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=3;
-									class Item0
-									{
-										name="rhs_mag_an_m8hc";
-										count=4;
-										ammoLeft=1;
-									};
-									class Item1
-									{
-										name="rhs_mag_m67";
-										count=4;
-										ammoLeft=1;
-									};
-									class Item2
-									{
-										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
-										count=2;
-										ammoLeft=30;
-									};
-								};
-								class ItemCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="FirstAidKit";
-										count=4;
-									};
-								};
-							};
-							class backpack
-							{
-								typeName="tf_rt1523g_big_bwmod";
-								isBackpack=1;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="rhs_mag_an_m8hc";
-										count=4;
-										ammoLeft=1;
-									};
-									class Item1
-									{
-										name="rhs_mag_m67";
-										count=4;
-										ammoLeft=1;
-									};
-								};
-								class ItemCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="FirstAidKit";
-										count=4;
-									};
-								};
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="tf_anprc152_1";
-							gps="ItemGPS";
-							hmd="rhsusf_ANPVS_15";
-							headgear="rhsusf_ach_helmet_M81";
-						};
-					};
-					id=1720;
-					type="rhsusf_usmc_marpat_d_teamleader";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={2343.584,11.821787,13171.175};
 						angles[]={6.2805324,4.1091857,0.016004669};
 					};
@@ -18004,7 +17841,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="(group this) setGroupId [""BRAVO""];";
+						init="(group this) setGroupId [""ALPHA""];";
 						name="b_teamleader";
 						description="Team Leader";
 						isPlayable=1;
@@ -18156,7 +17993,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -18169,7 +18006,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="(group this) setGroupId [""BRAVO""];";
+						init="(group this) setGroupId [""ALPHA""];";
 						name="b_javelin";
 						description="Javelin AT Spec.";
 						isPlayable=1;
@@ -18315,7 +18152,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item6
+				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
@@ -18459,7 +18296,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item7
+				class Item6
 				{
 					dataType="Object";
 					class PositionInfo
@@ -18630,7 +18467,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item8
+				class Item7
 				{
 					dataType="Object";
 					class PositionInfo
@@ -18770,7 +18607,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item9
+				class Item8
 				{
 					dataType="Object";
 					class PositionInfo
@@ -18924,7 +18761,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item10
+				class Item9
 				{
 					dataType="Object";
 					class PositionInfo
@@ -19092,7 +18929,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item11
+				class Item10
 				{
 					dataType="Object";
 					class PositionInfo
@@ -19105,7 +18942,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="(group this) setGroupId [""BRAVO""];";
+						init="(group this) setGroupId [""ALPHA""];";
 						name="b_assjavelin2";
 						description="Rifleman (Ass. AT)";
 						isPlayable=1;
@@ -19251,7 +19088,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item12
+				class Item11
 				{
 					dataType="Object";
 					class PositionInfo
@@ -19264,7 +19101,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="(group this) setGroupId [""BRAVO""];";
+						init="(group this) setGroupId [""ALPHA""];";
 						name="b_assjavelin";
 						description="Rifleman (Ass. AT)";
 						isPlayable=1;
@@ -19410,6 +19247,172 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item12
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2348.332,12.126266,13163.05};
+						angles[]={0.074525557,4.1132698,0.0026703537};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="(group this) setGroupId [""ALPHA""];";
+						name="a_teamleader";
+						description="Team Leader";
+						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m4a1_blockII_wd";
+								optics="optic_Nightstalker";
+								flashlight="rhsusf_acc_anpeq15A";
+								class primaryMuzzleMag
+								{
+									name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+									ammoLeft=30;
+								};
+							};
+							class handgun
+							{
+								name="hgun_Pistol_heavy_01_F";
+								class primaryMuzzleMag
+								{
+									name="11Rnd_45ACP_Mag";
+									ammoLeft=11;
+								};
+							};
+							class binocular
+							{
+								name="lerca_1200_tan";
+							};
+							class uniform
+							{
+								typeName="rhs_uniform_g3_m81";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="11Rnd_45ACP_Mag";
+										count=3;
+										ammoLeft=11;
+									};
+									class Item1
+									{
+										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+										count=1;
+										ammoLeft=30;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhsusf_spc_teamleader";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=3;
+									class Item0
+									{
+										name="rhs_mag_an_m8hc";
+										count=4;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="rhs_mag_m67";
+										count=4;
+										ammoLeft=1;
+									};
+									class Item2
+									{
+										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+								class ItemCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=4;
+									};
+								};
+							};
+							class backpack
+							{
+								typeName="tf_rt1523g_big_bwmod";
+								isBackpack=1;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="rhs_mag_an_m8hc";
+										count=4;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="rhs_mag_m67";
+										count=4;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=4;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="tf_anprc152_1";
+							gps="ItemGPS";
+							hmd="rhsusf_ANPVS_15";
+							headgear="rhsusf_ach_helmet_M81";
+						};
+					};
+					id=1766;
+					type="rhsusf_army_ocp_teamleader";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
 			};
 			class Attributes
 			{
@@ -19437,6 +19440,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
+						init="(group this) setGroupId [""SUPPORT""];";
 						name="pl";
 						description="Platoon Leader";
 						isPlayable=1;
@@ -19603,6 +19607,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
+						init="(group this) setGroupId [""SUPPORT""];";
 						name="uavOperator";
 						description="UAV Operator - Deathstar";
 						isPlayable=1;
@@ -19726,6 +19731,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.44999999;
+						init="(group this) setGroupId [""SUPPORT""];";
 						name="mortar";
 						description="Mortar Gunner";
 						isPlayable=1;
@@ -19869,6 +19875,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						init="(group this) setGroupId [""SUPPORT""];";
 						name="pl_medic";
 						description="Medic";
 						isPlayable=1;
@@ -20007,6 +20014,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="(group this) setGroupId [""SUPPORT""];";
 						name="jtac";
 						description="JTAC";
 						isPlayable=1;
@@ -20145,7 +20153,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="(group this) setGroupId [""SA""];";
+						init="(group this) setGroupId [""SUPPORT""];";
 						name="spotter";
 						description="Spotter";
 						isPlayable=1;
@@ -20189,6 +20197,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						init="(group this) setGroupId [""SUPPORT""];";
 						name="sniper";
 						description="Sniper";
 						isPlayable=1;
@@ -20359,7 +20368,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="(group this) setGroupId [""CHARLIE""];";
+						init="(group this) setGroupId [""BRAVO""];";
 						name="c_repair";
 						description="Repair Specialist";
 						isPlayable=1;
@@ -20522,6 +20531,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
+						init="(group this) setGroupId [""BRAVO""];";
 						name="cd_squadleader";
 						description="Squad Leader";
 						isPlayable=1;
@@ -20650,6 +20660,7 @@ class Mission
 					};
 					id=1729;
 					type="rhsusf_usmc_marpat_d_squadleader";
+					atlOffset=9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20679,350 +20690,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2315.8931,11.856407,13152.113};
-						angles[]={0.0026529003,0.84343034,6.2725215};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="CORPORAL";
-						init="(group this) setGroupId [""ALPHA""];";
-						name="d_teamleader";
-						description="Team Leader";
-						isPlayable=1;
-						class Inventory
-						{
-							class primaryWeapon
-							{
-								name="rhs_weap_m4a1_blockII_M203_wd";
-								optics="optic_Nightstalker";
-								flashlight="rhsusf_acc_anpeq15A";
-								class primaryMuzzleMag
-								{
-									name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
-									ammoLeft=30;
-								};
-							};
-							class handgun
-							{
-								name="hgun_Pistol_heavy_01_F";
-								class primaryMuzzleMag
-								{
-									name="11Rnd_45ACP_Mag";
-									ammoLeft=11;
-								};
-							};
-							class binocular
-							{
-								name="Rangefinder";
-							};
-							class uniform
-							{
-								typeName="rhs_uniform_g3_m81";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="11Rnd_45ACP_Mag";
-										count=3;
-										ammoLeft=11;
-									};
-									class Item1
-									{
-										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
-										count=1;
-										ammoLeft=30;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="rhsusf_spc_teamleader";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=3;
-									class Item0
-									{
-										name="rhs_mag_an_m8hc";
-										count=4;
-										ammoLeft=1;
-									};
-									class Item1
-									{
-										name="rhs_mag_m67";
-										count=4;
-										ammoLeft=1;
-									};
-									class Item2
-									{
-										name="rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
-										count=12;
-										ammoLeft=30;
-									};
-								};
-								class ItemCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="FirstAidKit";
-										count=4;
-									};
-								};
-							};
-							class backpack
-							{
-								typeName="tf_rt1523g_big_bwmod";
-								isBackpack=1;
-								class MagazineCargo
-								{
-									items=3;
-									class Item0
-									{
-										name="rhs_mag_an_m8hc";
-										count=4;
-										ammoLeft=1;
-									};
-									class Item1
-									{
-										name="rhs_mag_m67";
-										count=4;
-										ammoLeft=1;
-									};
-									class Item2
-									{
-										name="rhs_mag_M433_HEDP";
-										count=24;
-										ammoLeft=1;
-									};
-								};
-								class ItemCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="FirstAidKit";
-										count=4;
-									};
-								};
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="tf_anprc152";
-							gps="ItemGPS";
-							hmd="rhsusf_ANPVS_15";
-							headgear="rhsusf_ach_helmet_M81";
-						};
-					};
-					id=1730;
-					type="rhsusf_usmc_marpat_d_teamleader";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2321.3169,11.941564,13144.24};
-						angles[]={0.023998277,0.93696254,0.010663962};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="CORPORAL";
-						init="(group this) setGroupId [""CHARLIE""];";
-						name="c_teamleader";
-						description="Team Leader";
-						isPlayable=1;
-						class Inventory
-						{
-							class primaryWeapon
-							{
-								name="rhs_weap_m4a1_blockII_M203_wd";
-								optics="optic_Nightstalker";
-								flashlight="rhsusf_acc_anpeq15A";
-								class primaryMuzzleMag
-								{
-									name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
-									ammoLeft=30;
-								};
-							};
-							class handgun
-							{
-								name="hgun_Pistol_heavy_01_F";
-								class primaryMuzzleMag
-								{
-									name="11Rnd_45ACP_Mag";
-									ammoLeft=11;
-								};
-							};
-							class binocular
-							{
-								name="Rangefinder";
-							};
-							class uniform
-							{
-								typeName="rhs_uniform_g3_m81";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="11Rnd_45ACP_Mag";
-										count=3;
-										ammoLeft=11;
-									};
-									class Item1
-									{
-										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
-										count=1;
-										ammoLeft=30;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="rhsusf_spc_teamleader";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=3;
-									class Item0
-									{
-										name="rhs_mag_an_m8hc";
-										count=4;
-										ammoLeft=1;
-									};
-									class Item1
-									{
-										name="rhs_mag_m67";
-										count=4;
-										ammoLeft=1;
-									};
-									class Item2
-									{
-										name="rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
-										count=12;
-										ammoLeft=30;
-									};
-								};
-								class ItemCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="FirstAidKit";
-										count=4;
-									};
-								};
-							};
-							class backpack
-							{
-								typeName="tf_rt1523g_big_bwmod";
-								isBackpack=1;
-								class MagazineCargo
-								{
-									items=3;
-									class Item0
-									{
-										name="rhs_mag_an_m8hc";
-										count=4;
-										ammoLeft=1;
-									};
-									class Item1
-									{
-										name="rhs_mag_m67";
-										count=4;
-										ammoLeft=1;
-									};
-									class Item2
-									{
-										name="rhs_mag_M433_HEDP";
-										count=24;
-										ammoLeft=1;
-									};
-								};
-								class ItemCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="FirstAidKit";
-										count=4;
-									};
-								};
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="tf_anprc152";
-							gps="ItemGPS";
-							hmd="rhsusf_ANPVS_15";
-							headgear="rhsusf_ach_helmet_M81";
-						};
-					};
-					id=1731;
-					type="rhsusf_usmc_marpat_d_teamleader";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={2317.7949,11.85492,13149.516};
 						angles[]={0.0079936078,0.94048816,6.2805324};
 					};
@@ -21031,6 +20698,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						init="(group this) setGroupId [""BRAVO""];";
 						name="cd_medic2";
 						description="Medic";
 						isPlayable=1;
@@ -21157,7 +20825,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item5
+				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21170,6 +20838,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						init="(group this) setGroupId [""BRAVO""];";
 						name="cd_medic1";
 						description="Medic";
 						isPlayable=1;
@@ -21296,7 +20965,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item6
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21309,7 +20978,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="(group this) setGroupId [""CHARLIE""];";
+						init="(group this) setGroupId [""BRAVO""];";
 						name="c_engineer";
 						description="Engineer";
 						isPlayable=1;
@@ -21457,7 +21126,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item7
+				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21470,7 +21139,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="(group this) setGroupId [""CHARLIE""];";
+						init="(group this) setGroupId [""BRAVO""];";
 						name="c_demo";
 						description="Explosives Specialist";
 						isPlayable=1;
@@ -21618,7 +21287,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item8
+				class Item6
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21631,7 +21300,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="(group this) setGroupId [""ALPHA""];";
+						init="(group this) setGroupId [""BRAVO""];";
 						name="d_marksman";
 						description="Marksman";
 						isPlayable=1;
@@ -21757,7 +21426,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item9
+				class Item7
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21770,7 +21439,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="(group this) setGroupId [""DELTA""];";
+						init="(group this) setGroupId [""BRAVO""];";
 						name="d_grenadier";
 						description="Grenadier";
 						isPlayable=1;
@@ -21926,7 +21595,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item10
+				class Item8
 				{
 					dataType="Object";
 					class PositionInfo
@@ -21939,7 +21608,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="(group this) setGroupId [""DELTA""];";
+						init="(group this) setGroupId [""BRAVO""];";
 						name="d_rifleman";
 						description="Rifleman (M136)";
 						isPlayable=1;
@@ -22081,7 +21750,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item11
+				class Item9
 				{
 					dataType="Object";
 					class PositionInfo
@@ -22094,7 +21763,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="(group this) setGroupId [""DELTA""];";
+						init="(group this) setGroupId [""BRAVO""];";
 						name="d_autorifleman";
 						description="Light MG";
 						isPlayable=1;
@@ -22224,7 +21893,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item12
+				class Item10
 				{
 					dataType="Object";
 					class PositionInfo
@@ -22237,7 +21906,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="(group this) setGroupId [""DELTA""];";
+						init="(group this) setGroupId [""BRAVO""];";
 						name="d_assmg";
 						description="Rifleman (Ass. MG)";
 						isPlayable=1;
@@ -22394,11 +22063,344 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item11
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2321.3169,11.941564,13144.24};
+						angles[]={0.023998277,0.93696254,0.010663962};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="(group this) setGroupId [""BRAVO""];";
+						name="c_teamleader";
+						description="Team Leader";
+						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m4a1_blockII_wd";
+								optics="optic_Nightstalker";
+								flashlight="rhsusf_acc_anpeq15A";
+								class primaryMuzzleMag
+								{
+									name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+									ammoLeft=30;
+								};
+							};
+							class handgun
+							{
+								name="hgun_Pistol_heavy_01_F";
+								class primaryMuzzleMag
+								{
+									name="11Rnd_45ACP_Mag";
+									ammoLeft=11;
+								};
+							};
+							class binocular
+							{
+								name="lerca_1200_tan";
+							};
+							class uniform
+							{
+								typeName="rhs_uniform_g3_m81";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="11Rnd_45ACP_Mag";
+										count=3;
+										ammoLeft=11;
+									};
+									class Item1
+									{
+										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+										count=1;
+										ammoLeft=30;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhsusf_spc_teamleader";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=3;
+									class Item0
+									{
+										name="rhs_mag_an_m8hc";
+										count=4;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="rhs_mag_m67";
+										count=4;
+										ammoLeft=1;
+									};
+									class Item2
+									{
+										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+								class ItemCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=4;
+									};
+								};
+							};
+							class backpack
+							{
+								typeName="tf_rt1523g_big_bwmod";
+								isBackpack=1;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="rhs_mag_an_m8hc";
+										count=4;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="rhs_mag_m67";
+										count=4;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=4;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="tf_anprc152_1";
+							gps="ItemGPS";
+							hmd="rhsusf_ANPVS_15";
+							headgear="rhsusf_ach_helmet_M81";
+						};
+					};
+					id=1767;
+					type="rhsusf_army_ocp_teamleader";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item12
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2315.8931,11.856407,13152.113};
+						angles[]={0.0026529003,0.84343034,6.2725215};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="(group this) setGroupId [""BRAVO""];";
+						name="d_teamleader";
+						description="Team Leader";
+						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m4a1_blockII_wd";
+								optics="optic_Nightstalker";
+								flashlight="rhsusf_acc_anpeq15A";
+								class primaryMuzzleMag
+								{
+									name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+									ammoLeft=30;
+								};
+							};
+							class handgun
+							{
+								name="hgun_Pistol_heavy_01_F";
+								class primaryMuzzleMag
+								{
+									name="11Rnd_45ACP_Mag";
+									ammoLeft=11;
+								};
+							};
+							class binocular
+							{
+								name="lerca_1200_tan";
+							};
+							class uniform
+							{
+								typeName="rhs_uniform_g3_m81";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="11Rnd_45ACP_Mag";
+										count=3;
+										ammoLeft=11;
+									};
+									class Item1
+									{
+										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+										count=1;
+										ammoLeft=30;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhsusf_spc_teamleader";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=3;
+									class Item0
+									{
+										name="rhs_mag_an_m8hc";
+										count=4;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="rhs_mag_m67";
+										count=4;
+										ammoLeft=1;
+									};
+									class Item2
+									{
+										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+								class ItemCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=4;
+									};
+								};
+							};
+							class backpack
+							{
+								typeName="tf_rt1523g_big_bwmod";
+								isBackpack=1;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="rhs_mag_an_m8hc";
+										count=4;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="rhs_mag_m67";
+										count=4;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=4;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="tf_anprc152_1";
+							gps="ItemGPS";
+							hmd="rhsusf_ANPVS_15";
+							headgear="rhsusf_ach_helmet_M81";
+						};
+					};
+					id=1768;
+					type="rhsusf_army_ocp_teamleader";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
 			};
 			class Attributes
 			{
 			};
 			id=1642;
+			atlOffset=9.5367432e-007;
 		};
 		class Item537
 		{
@@ -22419,6 +22421,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="(group this) setGroupId [""HAMMER""];";
 						description="Tank  Gunner";
 						isPlayable=1;
 						class Inventory
@@ -22572,6 +22575,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
+						init="(group this) setGroupId [""HAMMER""];";
 						description="Tank Commander";
 						isPlayable=1;
 						class Inventory
@@ -22724,6 +22728,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="(group this) setGroupId [""HAMMER""];";
 						description="Tank Driver";
 						isPlayable=1;
 						class Inventory
@@ -22948,6 +22953,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						init="(group this) setGroupId [""BEE""];";
 						name="s1";
 						description="Heli Pilot";
 						isPlayable=1;
@@ -23095,6 +23101,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
+						init="(group this) setGroupId [""BEE""];";
 						name="s2";
 						description="Heli Pilot";
 						isPlayer=1;
@@ -23256,6 +23263,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
+						init="(group this) setGroupId [""EAGLE""];";
 						name="s4";
 						description="Jet Pilot";
 						isPlayable=1;
@@ -23369,6 +23377,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
+						init="(group this) setGroupId [""EAGLE""];";
 						name="s3";
 						description="Jet Pilot";
 						isPlayable=1;

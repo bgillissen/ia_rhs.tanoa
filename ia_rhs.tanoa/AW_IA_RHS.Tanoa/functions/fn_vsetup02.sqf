@@ -25,19 +25,16 @@ if (isNull _u) exitWith {};
 
 //============================================= ARRAYS
 
-_ghosthawk = ["B_Heli_Transport_01_camo_F","B_Heli_Transport_01_F"]; 			// ghosthawk
-_strider = ["I_MRAP_03_F","I_MRAP_03_hmg_F","I_MRAP_03_gmg_F"];					// strider
 _blackVehicles = ["B_Heli_Light_01_armed_F"];									// black skin
-_wasp = ["B_Heli_Light_01_F","B_Heli_Light_01_armed_F"];						// MH-9
-_orca = ["O_Heli_Light_02_unarmed_F"];											// Orca
+_pinkVehicles = ["RHS_A10"];													// pink skin
 _mobileArmory = ["B_Truck_01_ammo_F"];											// Mobile Armory
 _noAmmoCargo = ["B_APC_Tracked_01_CRV_F","B_Truck_01_ammo_F"];					// Bobcat CRV
-_slingHeli = ["RHS_MELB_AH6M_M", "RHS_MELB_AH6M", "RHS_UH60M_d", "RHS_CH_47F_10", "rhsusf_CH53E_USMC_D"]; // sling capable
+//_slingHeli = ["RHS_MELB_AH6M_M", "RHS_MELB_AH6M", "RHS_UH60M", "RHS_CH_47F_10", "rhsusf_CH53E_USMC_D"]; // sling capable
 //_slingHeli = []; // sling capable
 //_slingable = ["RHS_MELB_AH6M_M", "RHS_MELB_AH6M"];							// slingable
-_slingable = [];																// slingable
-_notSlingable = ["RHS_UH60M_d", "RHS_CH_47F_10", "rhsusf_CH53E_USMC_D"];		// not slingable
-_dropHeli = ["RHS_UH60M_d", "RHS_CH_47F_10", "rhsusf_CH53E_USMC_D"];			// drop capable
+//_slingable = [];																// slingable
+//_notSlingable = ["RHS_UH60M_d", "RHS_CH_47F_10", "rhsusf_CH53E_USMC_D"];		// not slingable
+_dropHeli = ["RHS_UH60M", "RHS_CH_47F_10", "rhsusf_CH53E_USMC_D"];			// drop capable
 _uav = ["B_UAV_02_CAS_F","B_UAV_02_F","B_UGV_01_F","B_UGV_01_rcws_F"];			// UAVs
 _buzzard = ["I_Plane_Fighter_03_AA_F"];
 
@@ -59,23 +56,10 @@ if (_t in _blackVehicles) then {
 	for "_i" from 0 to 9 do {_u setObjectTextureGlobal [_i,"#(argb,8,8,3)color(0,0,0,0.6)"];};
 };
 
-//===== strider nato skin
+//===== pink camo
 
-if (_t in _strider) then {
-	_u setObjectTextureGlobal [0,'\A3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa'];
-	_u setObjectTextureGlobal [1,'\A3\data_f\vehicles\turret_co.paa']; 
-};
-
-//===== aaf skin
-
-if(_t in _wasp) then {
-	_u setObjectTextureGlobal [0,'A3\Air_F\Heli_Light_01\Data\skins\heli_light_01_ext_digital_co.paa'];
-};
-
-//===== aaf skin
-
-if(_t in _orca) then {
-	_u setObjectTextureGlobal [0,'A3\Air_F\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa'];
+if (_t in _pinkVehicles) then {
+	_u setObjectTextureGlobal [0,"#(argb,8,8,3)color(1,0.75,0.84,0.3)"];
 };
 
 //===== remove ammo cargo
@@ -101,14 +85,6 @@ if (_t in _mobileArmory) then {
 
 if (_t in _dropHeli) then {
 	_u setVariable ["airdrop_veh",TRUE,TRUE];
-};
-
-//===== Ghosthawk specific, animated doors, and turret locking system
-
-if (_t in _ghosthawk) then {
-	_u setVariable ["turretL_locked",FALSE,TRUE];
-	_u setVariable ["turretR_locked",FALSE,TRUE];
-	[_u] execVM "scripts\vehicle\animate\ghosthawk.sqf";
 };
 
 //===== UAV respawn fixer

@@ -44,12 +44,12 @@ _buzzard = ["I_Plane_Fighter_03_AA_F"];
 {_x addCuratorEditableObjects [[_u],false];} count allCurators;
 
 //===== Heli sling
-
+/*
 if (_t in _slingHeli) then {
 	_u setVariable ['sling_veh',TRUE,TRUE];
 };
 _u setVariable ["slingable",TRUE,TRUE];
-
+*/
 //===== black camo
 
 if (_t in _blackVehicles) then {

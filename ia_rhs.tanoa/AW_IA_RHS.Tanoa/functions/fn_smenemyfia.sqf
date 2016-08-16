@@ -37,7 +37,7 @@ for "_x" from 0 to (2 + (random 4)) do {
 
 	{
 		_x addCuratorEditableObjects [units _infteamPatrol, false];
-	} foreach adminCurators;
+	} foreach allCurators;
 
 };
 
@@ -54,7 +54,7 @@ for "_x" from 0 to 2 do {
 
 	{
 		_x addCuratorEditableObjects [units _IRGsniperGroup, false];
-	} foreach adminCurators;
+	} foreach allCurators;
 
 };
 
@@ -87,7 +87,7 @@ for "_x" from 0 to 3 do {
 	{
 		_x addCuratorEditableObjects [[_SMveh], false];
 		_x addCuratorEditableObjects [units _SMvehPatrol, false];
-	} foreach adminCurators;
+	} foreach allCurators;
 
 };
 
@@ -111,7 +111,7 @@ for "_x" from 0 to 1 do {
 	{
 		_x addCuratorEditableObjects [[_SMaa], false];
 		_x addCuratorEditableObjects [units _SMaaPatrol, false];
-	} foreach adminCurators;
+	} foreach allCurators;
 
 };
 
@@ -130,7 +130,7 @@ for "_x" from 0 to 1 do {
 		_enemiesArray = _enemiesArray + [_newGrp]; };
 		{
 			_x addCuratorEditableObjects [units _newGrp, false];
-		} foreach adminCurators;
+		} foreach allCurators;
 	} forEach (getPos sideObj nearObjects ["House", 200]);
 
 _enemiesArray

@@ -29,13 +29,10 @@ for [ {_i = 0}, {_i < count(paramsArray)}, {_i = _i + 1} ] do {
 
 if (PARAMS_AO == 1) then { _null = [] execVM "mission\main\missionControl.sqf"; };						// Main AO
 if (PARAMS_SideObjectives == 1) then { _null = [] execVM "mission\side\missionControl.sqf";};			// Side objectives		
-_null = [] execVM "scripts\eos\OpenMe.sqf";																// EOS (urban mission and defend AO)
-_null = [] execVM "scripts\misc\airbaseDefense.sqf";													// Airbase air defense
+
 _null = [] execVM "scripts\misc\cleanup.sqf";															// cleanup
 _null = [] execVM "scripts\misc\islandConfig.sqf";														// prep the island for mission
-_null = [] execVM "scripts\misc\zeusupdater.sqf";														// zeus unit updater loop
-if (PARAMS_EasterEggs == 1) then {_null = [] execVM "scripts\easterEggs.sqf";};							// Spawn easter eggs around the island
-adminCurators = allCurators;
+
 enableEnvironment FALSE;
 BACO_ammoSuppAvail = true; publicVariable "BACO_ammoSuppAvail";
 
@@ -44,3 +41,11 @@ BACO_ammoSuppAvail = true; publicVariable "BACO_ammoSuppAvail";
 _skips = [1,2,3,4,5,6,7,8,9,10,11,12];
 _skipTo = _skips call BIS_fnc_selectRandom;
 skipTime _skipTo;
+
+//-------------------------------------------------- Independent enemy to BLUFOR and friendly to OPFOR
+
+independent setFriend [east, 1];
+east setFriend [independent, 1];
+
+independent setFriend [west, 0];
+west setFriend [independent, 0];

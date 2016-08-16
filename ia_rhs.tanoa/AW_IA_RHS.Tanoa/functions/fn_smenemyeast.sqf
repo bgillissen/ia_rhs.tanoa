@@ -44,7 +44,7 @@ for "_x" from 1 to (3 + (random 4)) do {
 
 	{
 		_x addCuratorEditableObjects [units _infteamPatrol, false];
-	} foreach adminCurators;
+	} foreach allCurators;
 
 };
 
@@ -60,7 +60,7 @@ for "_x" from 0 to 1 do {
 
 	{
 		_x addCuratorEditableObjects [units _smSniperTeam, false];
-	} foreach adminCurators;
+	} foreach allCurators;
 
 };
 	
@@ -82,7 +82,7 @@ _enemiesArray = _enemiesArray + [_SMveh1];
 {
 	_x addCuratorEditableObjects [[_SMveh1], false];
 	_x addCuratorEditableObjects [units _SMvehPatrol, false];
-} foreach adminCurators;
+} foreach allCurators;
 	
 //---------- VEHICLE RANDOM	
 	
@@ -104,7 +104,7 @@ _enemiesArray = _enemiesArray + [_SMvehPatrol];
 {
 	_x addCuratorEditableObjects [[_SMveh2], false];
 	_x addCuratorEditableObjects [units _SMvehPatrol, false];
-} foreach adminCurators;
+} foreach allCurators;
 
 //---------- VEHICLE AA
 	
@@ -125,7 +125,7 @@ _enemiesArray = _enemiesArray + [_SMaa];
 {
 	_x addCuratorEditableObjects [[_SMaa], false];
 	_x addCuratorEditableObjects [units _SMaaPatrol, false];
-} foreach adminCurators;
+} foreach allCurators;
 
 //---------- COMMON
 
@@ -142,7 +142,7 @@ _enemiesArray = _enemiesArray + [_SMaa];
 			_enemiesArray = _enemiesArray + [_newGrp];
 			{
 				_x addCuratorEditableObjects [units _newGrp, false];
-			} foreach adminCurators; 
+			} foreach allCurators; 
 		};
 	} forEach (getPos sideObj nearObjects ["House", 150]);
 	

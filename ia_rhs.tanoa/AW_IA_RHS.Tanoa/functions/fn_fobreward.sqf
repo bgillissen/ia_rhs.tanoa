@@ -35,4 +35,4 @@ if (_reward isKindOf "B_G_Offroad_01_repair_F") exitWith {
 
 {
 	_x addCuratorEditableObjects [[_reward], false];
-} foreach adminCurators;
+} foreach allCurators;

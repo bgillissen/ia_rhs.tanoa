@@ -31,10 +31,14 @@ _missileSoldiers = ["rhsusf_army_ocp_javelin",
                     ];
 _missileSpecialised = ["launch_NLAW_F",
                        "launch_B_Titan_F",
+                       "launch_B_Titan_tna_F",
                        "launch_O_Titan_F",
+                       "launch_O_Titan_ghex_F",
                        "launch_I_Titan_F",
                        "launch_B_Titan_short_F",
+                       "launch_B_Titan_short_tna_F",
                        "launch_O_Titan_short_F",
+                       "launch_O_Titan_short_ghex_F",
                        "launch_I_Titan_short_F",
                        "rhs_weap_fim92",
                        "rhs_weap_fgm148",
@@ -52,9 +56,15 @@ _sniperSpecialised = ["srifle_GM6_F",
                       "srifle_GM6_camo_F",
                       "srifle_GM6_camo_LRPS_F",
                       "srifle_GM6_camo_SOS_F",
+                      "srifle_GM6_ghex_F",
+                      "srifle_GM6_ghex_LRPS_F",
+                      "srifle_GM6_ghex_SOS_F",
                       "srifle_LRR_camo_F",
                       "srifle_LRR_camo_LRPS_F",
                       "srifle_LRR_camo_SOS_F",
+                      "srifle_LRR_tna_F",
+                      "srifle_LRR_tna_LRPS_F",
+                      "srifle_LRR_tna_SOS_F"
                       //"rhs_weap_svdp",        no restriction, only available by looting
                       //"rhs_weap_svdp_npz",
                       //"rhs_weap_svdp_wd",
@@ -67,7 +77,10 @@ _sniperSpecialised = ["srifle_GM6_F",
                       "rhs_weap_XM2010_wd",
                       "rhs_weap_M107",
                       "rhs_weap_M107_d",
-        			  "rhs_weap_M107_w"
+        			  "rhs_weap_M107_w",
+        			  "rhs_weap_m24sws",
+        			  "rhs_weap_m24sws_blk",
+        			  "rhs_weap_m24sws_ghillie"
                       ];
 //===== SNIPER OPTICS
 _sniperTeam = ["rhsusf_army_ocp_sniper", 
@@ -122,6 +135,7 @@ _backpackRestricted = ["O_Mortar_01_support_F",
                        "I_AT_01_weapon_F",
                        "O_AT_01_weapon_F",
                        "I_AA_01_weapon_F",
+                       "O_AA_01_weapon_F"
                        //"RHS_Podnos_Bipod_Bag",       // lootable by killing enemys (these are statics)
                        //"RHS_Podnos_Gun_Bag",
                        //"RHS_Metis_Gun_Bag",
@@ -135,8 +149,8 @@ _backpackRestricted = ["O_Mortar_01_support_F",
                        //"RHS_NSV_Tripod_Bag",
                        //"RHS_NSV_Gun_Bag",
                        //"RHS_SPG9_Gun_Bag",
-                       //"RHS_SPG9_Tripod_Bag",
-                       "O_AA_01_weapon_F"];
+                       //"RHS_SPG9_Tripod_Bag"
+                       ];
 //===== LMG
 _autoRiflemen = ["rhsusf_army_ocp_machinegunner",
 				 "rhsusf_army_ocp_autorifleman"
@@ -150,6 +164,12 @@ _autoSpecialised = ["MMG_02_black_F",
                     "MMG_01_hex_F",
                     "MMG_01_hex_ARCO_LP_F",
                     "MMG_01_tan_F",
+                    "LMG_03_F",
+                    "LMG_Mk200_F",
+                    "LMG_Zafir_F",
+                    "arifle_SPAR_02_snd_F",
+                    "arifle_SPAR_02_khk_F",
+                    "arifle_SPAR_02_blk_F"
                     "rhs_weap_m240B",
                     "rhs_weap_m240B_CAP",
                     "rhs_weap_m240G",
@@ -206,6 +226,12 @@ _marksmanGun = ["srifle_DMR_02_ACO_F",
                 "srifle_DMR_06_camo_F",
                 "srifle_DMR_06_camo_khs_F",
                 "srifle_DMR_06_olive_F",
+                "srifle_DMR_07_blk_F",
+                "srifle_DMR_07_ghex_F",
+                "srifle_DMR_07_hex_F",
+                "arifle_SPAR_03_blk_F",
+                "arifle_SPAR_03_khk_F",
+                "arifle_SPAR_03_snd_F",
                 "rhs_weap_sr25",
                 "rhs_weap_sr25_ec"
                 ];

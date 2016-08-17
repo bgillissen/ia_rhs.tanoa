@@ -8,11 +8,11 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1796;
+		nextID=1798;
 	};
 	class MarkerIDProvider
 	{
-		nextID=81;
+		nextID=83;
 	};
 	class Camera
 	{
@@ -529,7 +529,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=545;
+		items=546;
 		class Item0
 		{
 			dataType="Logic";
@@ -24350,6 +24350,15 @@ class Mission
 			type="Empty";
 			id=1793;
 			atlOffset=-9.5;
+		};
+		class Item545
+		{
+			dataType="Marker";
+			position[]={3363.7271,0,12860.956};
+			name="mortarsafe";
+			type="Empty";
+			id=1796;
+			atlOffset=-10.52991;
 		};
 	};
 	class Connections

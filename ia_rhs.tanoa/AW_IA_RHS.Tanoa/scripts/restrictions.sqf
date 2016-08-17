@@ -9,7 +9,7 @@ Tweak by ben:
     same but with rhs player classes and added rhs weapons
 _________________________________________________*/
 
-private ["_opticsAllowed","_specialisedOptics","_optics","_basePos","_firstRun","_insideSafezone","_outsideSafezone"];
+private ["_opticsAllowed","_specialisedOptics","_optics","_basePos","_firstRun","_insideSafezone","_outsideSafezone", "_pos"];
 
 #define AT_MSG "Only AT/AA Soldiers may use this weapon system. Launcher removed."
 #define SNIPER_MSG "Only Snipers may use this weapon system. Sniper rifle removed."
@@ -64,7 +64,7 @@ _sniperSpecialised = ["srifle_GM6_F",
                       "srifle_LRR_camo_SOS_F",
                       "srifle_LRR_tna_F",
                       "srifle_LRR_tna_LRPS_F",
-                      "srifle_LRR_tna_SOS_F"
+                      "srifle_LRR_tna_SOS_F",
                       //"rhs_weap_svdp",        no restriction, only available by looting
                       //"rhs_weap_svdp_npz",
                       //"rhs_weap_svdp_wd",
@@ -169,7 +169,7 @@ _autoSpecialised = ["MMG_02_black_F",
                     "LMG_Zafir_F",
                     "arifle_SPAR_02_snd_F",
                     "arifle_SPAR_02_khk_F",
-                    "arifle_SPAR_02_blk_F"
+                    "arifle_SPAR_02_blk_F",
                     "rhs_weap_m240B",
                     "rhs_weap_m240B_CAP",
                     "rhs_weap_m240G",
@@ -276,96 +276,97 @@ if (PARAMS_rMarksman != 0) then {restrict_Marksman = true;};
 
 while {true} do {
 
-    //------------------------------------- Launchers
+	if ( player distance (getMarkerPos "unrestricted") > 20 ) then { 
 
-    if (({player hasWeapon _x} count _missileSpecialised) > 0) then {
-        if (({player isKindOf _x} count _missileSoldiers) < 1) then {
-            player removeWeapon (secondaryWeapon player);
-            titleText [AT_MSG,"PLAIN",3];
-        };
-    };
+    	//------------------------------------- Launchers
+
+    	if (({player hasWeapon _x} count _missileSpecialised) > 0) then {
+        	if (({player isKindOf _x} count _missileSoldiers) < 1) then {
+            	player removeWeapon (secondaryWeapon player);
+            	titleText [AT_MSG,"PLAIN",3];
+        	};
+    	};
     
-    sleep 1;
-    //------------------------------------- Sniper Rifles
+    	sleep 1;
+    	//------------------------------------- Sniper Rifles
 
-    if (({player hasWeapon _x} count _sniperSpecialised) > 0) then {
-        if (({player isKindOf _x} count _snipers) < 1) then {
-            player removeWeapon (primaryWeapon player);
-            titleText [SNIPER_MSG,"PLAIN",3];
-        };
-    };
-
-    sleep 1;
-    //------------------------------------- UAV
-
-    _assignedItems = assignedItems player;
-
-    if (({"B_UavTerminal" == _x} count _assignedItems) > 0) then {
-        if (({player isKindOf _x} count _uavOperator) < 1) then {
-            player unassignItem "B_UavTerminal";
-            player removeItem "B_UavTerminal";
-            titleText [UAV_MSG,"PLAIN",3];
-        };
-    };
+    	if (({player hasWeapon _x} count _sniperSpecialised) > 0) then {
+        	if (({player isKindOf _x} count _snipers) < 1) then {
+            	player removeWeapon (primaryWeapon player);
+            	titleText [SNIPER_MSG,"PLAIN",3];
+        	};
+    	};
+    	sleep 1;
     
-    sleep 1;
-    //------------------------------------- Thermal optics
+    	//------------------------------------- UAV
 
-    if (restrict_Thermal) then {
-            _optics = primaryWeaponItems player;    
-            if (({_x in _optics} count _specialisedOptics) > 0) then {
-                if (({player isKindOf _x} count _opticsAllowed) < 1) then {
-                    {player removePrimaryWeaponItem  _x;} count _specialisedOptics;
-                    titleText [OPTICS_MSG,"PLAIN",3];
-                };
-            };
-            sleep 1;
-    };
+    	_assignedItems = assignedItems player;
+    	if (({"B_UavTerminal" == _x} count _assignedItems) > 0) then {
+        	if (({player isKindOf _x} count _uavOperator) < 1) then {
+            	player unassignItem "B_UavTerminal";
+            	player removeItem "B_UavTerminal";
+            	titleText [UAV_MSG,"PLAIN",3];
+        	};
+    	};
+       	sleep 1;
     
-    //------------------------------------- sniper optics
+    	//------------------------------------- Thermal optics
 
-    if (restrict_sOptics) then {
-        _optics = primaryWeaponItems player;    
-        if (({_x in _optics} count _sniperOpt) > 0) then {
-            if (({player isKindOf _x} count _sniperTeam) < 1) then {
-                {player removePrimaryWeaponItem  _x;} count _sniperOpt;
-                titleText [SOPT_MSG,"PLAIN",3];
-            };
-        };
-        sleep 1;
-    };
+    	if (restrict_Thermal) then {
+            	_optics = primaryWeaponItems player;    
+            	if (({_x in _optics} count _specialisedOptics) > 0) then {
+                	if (({player isKindOf _x} count _opticsAllowed) < 1) then {
+                    	{player removePrimaryWeaponItem  _x;} count _specialisedOptics;
+                    	titleText [OPTICS_MSG,"PLAIN",3];
+                	};
+            	};
+        	    sleep 1;
+    	};
+    
+    	//------------------------------------- sniper optics
 
-    //------------------------------------- LMG
+    	if (restrict_sOptics) then {
+        	_optics = primaryWeaponItems player;    
+        	if (({_x in _optics} count _sniperOpt) > 0) then {
+            	if (({player isKindOf _x} count _sniperTeam) < 1) then {
+                	{player removePrimaryWeaponItem  _x;} count _sniperOpt;
+                	titleText [SOPT_MSG,"PLAIN",3];
+            	};
+        	};
+        	sleep 1;
+    	};
+
+    	//------------------------------------- LMG
         
-    if (restrict_LMG) then {
-        if (({player hasWeapon _x} count _autoSpecialised) > 0) then {
-            if (({player isKindOf _x} count _autoRiflemen) < 1) then {
-                player removeWeapon (primaryWeapon player);
-                titleText [MG_MSG,"PLAIN",3];
-            };
-        };
-        sleep 1;
-    };
+    	if (restrict_LMG) then {
+        	if (({player hasWeapon _x} count _autoSpecialised) > 0) then {
+            	if (({player isKindOf _x} count _autoRiflemen) < 1) then {
+                	player removeWeapon (primaryWeapon player);
+                	titleText [MG_MSG,"PLAIN",3];
+            	};
+        	};
+        	sleep 1;
+    	};
     
-    //------------------------------------- Marksman
+    	//------------------------------------- Marksman
         
-    if (restrict_Marksman) then {
-        if (({player hasWeapon _x} count _marksmanGun) > 0) then {
-            if (({player isKindOf _x} count _marksman) < 1) then {
-                player removeWeapon (primaryWeapon player);
-                titleText [MRK_MSG,"PLAIN",3];
-            };
-        };
-        sleep 1;
-    };
+    	if (restrict_Marksman) then {
+        	if (({player hasWeapon _x} count _marksmanGun) > 0) then {
+            	if (({player isKindOf _x} count _marksman) < 1) then {
+                	player removeWeapon (primaryWeapon player);
+                	titleText [MRK_MSG,"PLAIN",3];
+            	};
+        	};
+        	sleep 1;
+    	};
     
-    //------------------------------------- Opfor turret backpacks
+    	//------------------------------------- Opfor turret backpacks
 
-    if ((backpack player) in _backpackRestricted) then {
-        removeBackpack player;
-        titleText [AUTOTUR_MSG, "PLAIN", 3];
+    	if ((backpack player) in _backpackRestricted) then {
+        	removeBackpack player;
+        	titleText [AUTOTUR_MSG, "PLAIN", 3];
+    	};
     };
-    
     //===================================== SAFE ZONE MANAGER
     
     _szmkr = getMarkerPos "safezone_marker";

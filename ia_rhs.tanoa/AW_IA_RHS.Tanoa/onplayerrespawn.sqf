@@ -20,18 +20,13 @@ waitUntil {player == player};
 
 
 //=========================== Fatigue setting
-
 if (PARAMS_Fatigue == 0) then {player enableFatigue FALSE;};
 
-//=========================== PILOTS ONLY
-
-_helipilots = ["rhsusf_army_ocp_helipilot"];
-_iamhelipilot = ({typeOf player == _x} count _helipilots) > 0;
-if (_iamhelipilot) then {
-	//===== HELI SUPPLY DROP
-	if (PARAMS_HeliDrop != 0) then {
-		player addAction ["Drop supply crate",QS_fnc_airDrop,[],0,false,true,'','[] call QS_fnc_conditionAirDrop'];
-	};
+//=========================== Airdrop
+_pilots = ["rhsusf_army_ocp_helipilot", "rhsusf_airforce_jetpilot"];
+_iampilot = ({typeOf player == _x} count _pilots) > 0;
+if (_iampilot && PARAMS_HeliDrop != 0) then {
+	player addAction ["Drop supply crate",QS_fnc_airDrop,[],0,false,true,'','[] call QS_fnc_conditionAirDrop'];
 };
 
 //============================= UAV

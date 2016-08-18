@@ -27,7 +27,7 @@ _chuteType = "B_Parachute_02_F";			//parachute for blufor, for opfor and greenfo
 _crateType =  "rhsusf_mags_crate";			//ammocrate class for blufor, feel free to change to whichever box you desire
 _smokeType =  "SmokeShellPurple";  			//smoke shell color you want to use
 _lightType =  "Chemlight_blue";  			//chemlightcolor you want used
-_reloadtime = 600;  							// time before next ammo drop is available to use, default 600 or 480
+_reloadtime = 600;  						// time before next ammo drop is available to use, default 600 or 480
 _minheight = 39;  							// the height you have to be before you can actually drop the crate
 
 //--------------------------------------------------------- MEAT AND POTATOES

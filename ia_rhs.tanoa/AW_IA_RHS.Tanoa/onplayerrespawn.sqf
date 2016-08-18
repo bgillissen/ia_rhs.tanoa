@@ -61,6 +61,16 @@ inventory_cleared = FALSE;
 player setVariable ["seated",FALSE];
 player addAction ["Clear vehicle inventory",QS_fnc_actionClearInventory,[],-97,FALSE,FALSE,'','[] call QS_fnc_conditionClearInventory'];
 
+//====================== Right billboard Image Randomiser
+_imageList = [1,2,3,4,5,6];
+_bill = _imageList call BIS_fnc_selectRandom;
+if (_bill == 1) then {Bill_2 setObjectTexture [0,"media\images\billboard1.paa"]};
+if (_bill == 2) then {Bill_2 setObjectTexture [0,"media\images\billboard2.paa"]};
+if (_bill == 3) then {Bill_2 setObjectTexture [0,"media\images\billboard3.paa"]};
+if (_bill == 4) then {Bill_2 setObjectTexture [0,"media\images\billboard4.paa"]};
+if (_bill == 5) then {Bill_2 setObjectTexture [0,"media\images\billboard5.paa"]};
+if (_bill == 6) then {Bill_2 setObjectTexture [0,"media\images\billboard6.paa"]};
+
 //======================= Remove any rf7800str radio and give a anprc152 instead
 for "_i" from 1 to 999 do {
 	scopeName "radioLoop";

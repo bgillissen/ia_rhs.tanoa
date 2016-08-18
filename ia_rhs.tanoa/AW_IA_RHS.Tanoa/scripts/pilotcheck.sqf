@@ -5,22 +5,16 @@
 _helipilots = ["rhsusf_army_ocp_helipilot"];
 _jetpilots = ["rhsusf_airforce_jetpilot"];
 
-_aircraft_nocopilot = ["RHS_UH60M_d", 
-					   "RHS_UH60M_MEV2_d",
-					   "RHS_CH_47F_10", 
-					   "rhsusf_CH53E_USMC_D", 
-					   "RHS_MELB_AH6M_M"];
+_heli_nocopilot = ["RHS_UH60M", 
+				   "RHS_UH60M_MEV2",
+				   "RHS_CH_47F_10", 
+				   "rhsusf_CH53E_USMC_D", 
+				   "RHS_MELB_AH6M_M"];
 
 waitUntil {player == player};
 
 _iamhelipilot = ({typeOf player == _x} count _helipilots) > 0;
 _iamjetpilot = ({typeOf player == _x} count _jetpilots) > 0;
-
-_uid = getPlayerUID player;
-_whitelist = [
-				//"76561198030235789" //ben
-			 ];
-if (_uid in _whitelist) exitWith {};
 
 while { true } do {
 
@@ -28,11 +22,11 @@ while { true } do {
 		_veh = vehicle player;
 		//------------------------------ only helipilot
 		if((_veh isKindOf "Helicopter") && !(_veh isKindOf "ParachuteBase")) then {
-			if(({typeOf _veh == _x} count _aircraft_nocopilot) > 0) then {
+			if(({typeOf _veh == _x} count _heli_nocopilot) > 0) then {
 				_forbidden = [_veh turretUnit [0]];
 				if(player in _forbidden) then {
 					if (!_iamhelipilot) then {
-						systemChat "Co-pilot is disabled on this choppah";
+						systemChat "Co-pilot seat is disabled on this helicopter";
 						player action ["getOut",_veh];
 					};
 				};
@@ -40,7 +34,7 @@ while { true } do {
 			if(!_iamhelipilot) then {
 				_forbidden = [driver _veh];
 				if (player in _forbidden) then {
-					systemChat "You must be a helicopter pilot to fly this choppah";
+					systemChat "You must be a helicopter pilot to fly this helicopter";
 					player action ["getOut", _veh];
 				};
 			};
@@ -53,9 +47,14 @@ while { true } do {
 					systemChat "You must be a jet pilot to fly this aircraft";
 					player action ["getOut", _veh];
 				};
+				_forbidden = [_veh turretUnit [0]];
+				if(player in _forbidden) then {
+					systemChat "Co-pilot seat is disabled on this aircraft";
+					player action ["getOut",_veh];
+				};
 			};
 		};
-		sleep 2;
+		sleep 4;
 	};	
 };
 

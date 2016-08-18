@@ -36,7 +36,6 @@ _noAmmoCargo = ["B_APC_Tracked_01_CRV_F","B_Truck_01_ammo_F"];					// Bobcat CRV
 //_notSlingable = ["RHS_UH60M_d", "RHS_CH_47F_10", "rhsusf_CH53E_USMC_D"];		// not slingable
 _dropHeli = ["RHS_UH60M", "RHS_CH_47F_10", "rhsusf_CH53E_USMC_D"];			// drop capable
 _uav = ["B_UAV_02_CAS_F","B_UAV_02_F","B_UGV_01_F","B_UGV_01_rcws_F"];			// UAVs
-_buzzard = ["I_Plane_Fighter_03_AA_F"];
 
 //============================================= SORT
 //===== Add to Zeus
@@ -96,10 +95,4 @@ if (_t in _uav) then {
 		sleep 2;
 		createVehicleCrew _u;
 	};
-};
-
-//===== Buzaar Radio
-
-if (_t in _buzzard) then {
-	_u setVariable ["tf_side", "west", true];
 };

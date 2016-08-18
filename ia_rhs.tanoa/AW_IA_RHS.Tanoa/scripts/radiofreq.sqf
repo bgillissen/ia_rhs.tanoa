@@ -10,6 +10,7 @@
 		if ( _pos == "cargo" ) exitWith{}; 
 		_haveVehRadio =  _veh call TFAR_fnc_hasVehicleRadio;
 		if ( _haveVehRadio ) then {
+			_veh setVariable ["tf_side", "west", true];
 			[(call TFAR_fnc_activeLrRadio), 1, "50"] call TFAR_fnc_SetChannelFrequency;
 			[(call TFAR_fnc_activeLrRadio), 2, "60"] call TFAR_fnc_SetChannelFrequency;
 			[(call TFAR_fnc_activeLrRadio), 3, "70"] call TFAR_fnc_SetChannelFrequency;
@@ -19,7 +20,7 @@
 			[(call TFAR_fnc_activeLrRadio), 7, "110"] call TFAR_fnc_SetChannelFrequency;
 			[(call TFAR_fnc_activeLrRadio), 8, "120"] call TFAR_fnc_SetChannelFrequency;
 			[(call TFAR_fnc_activeLrRadio), 9, "130"] call TFAR_fnc_SetChannelFrequency;
-			systemChat "Vehicle Frequencies set";
+			//systemChat "Vehicle Frequencies set";
 		}; 
 	}];
 	
@@ -75,7 +76,7 @@
 					[(call TFAR_fnc_activeLrRadio), 7, "110"] call TFAR_fnc_SetChannelFrequency;
 					[(call TFAR_fnc_activeLrRadio), 8, "120"] call TFAR_fnc_SetChannelFrequency;
 					[(call TFAR_fnc_activeLrRadio), 9, "130"] call TFAR_fnc_SetChannelFrequency;
-					systemChat "LongRange Frequencies set";
+					//systemChat "LongRange Frequencies set";
 				};
 				sleep 2;
 				_haveSwRadio = call TFAR_fnc_haveSWRadio;
@@ -88,7 +89,7 @@
 					[(call TFAR_fnc_activeSwRadio), 6, "350"] call TFAR_fnc_SetChannelFrequency;
 					[(call TFAR_fnc_activeSwRadio), 7, "360"] call TFAR_fnc_SetChannelFrequency;
 					[(call TFAR_fnc_activeSwRadio), 8, "370"] call TFAR_fnc_SetChannelFrequency;
-					systemChat "ShortWave Frequencies set";
+					//systemChat "ShortWave Frequencies set";
 				}; 
 				_this setVariable [ "VAcatch", "VAcatch" ];
         	}; 

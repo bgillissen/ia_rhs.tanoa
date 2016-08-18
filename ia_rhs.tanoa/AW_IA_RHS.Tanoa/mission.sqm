@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1832;
+		nextID=1835;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2525.8,75.120575,13501.802};
-		dir[]={-0.87991989,-0.28080162,-0.38357821};
-		up[]={-0.25747514,0.95972639,-0.11223871};
-		aside[]={-0.39965484,-7.0256647e-008,0.91679847};
+		pos[]={2372.366,63.740166,13251.013};
+		dir[]={0.52128094,-0.45852673,0.71989626};
+		up[]={0.26894727,0.88863665,0.37142047};
+		aside[]={0.81004977,-6.6585199e-007,-0.58656305};
 	};
 };
 binarizationWanted=0;
@@ -546,7 +546,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=574;
+		items=577;
 		class Item0
 		{
 			dataType="Logic";
@@ -16121,7 +16121,7 @@ class Mission
 			};
 			id=1620;
 			type="C_Scooter_Transport_01_F";
-			atlOffset=0.25299999;
+			atlOffset=0.25299996;
 		};
 		class Item499
 		{
@@ -16138,7 +16138,7 @@ class Mission
 			};
 			id=1621;
 			type="C_Scooter_Transport_01_F";
-			atlOffset=0.264;
+			atlOffset=0.26400006;
 		};
 		class Item500
 		{
@@ -25808,6 +25808,66 @@ class Mission
 				};
 				nAttributes=2;
 			};
+		};
+		class Item574
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2451.1235,18.976353,13293.612};
+				angles[]={0.15084518,0.85036182,0.02666023};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init="this allowDamage false";
+				name="halogenlight2_8";
+			};
+			id=1832;
+			type="Land_LampHalogen_F";
+			atlOffset=-9.5367432e-007;
+		};
+		class Item575
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2319.8174,18.770504,13282.497};
+				angles[]={6.272521,0.85036182,0.0053265258};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init="this allowDamage false";
+				name="halogenlight2_9";
+			};
+			id=1833;
+			type="Land_LampHalogen_F";
+			atlOffset=0.0059833527;
+		};
+		class Item576
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2337.4333,19.262178,13296.93};
+				angles[]={0,0.85036182,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				init="this allowDamage false";
+				name="halogenlight2_10";
+			};
+			id=1834;
+			type="Land_LampHalogen_F";
+			atlOffset=-9.5367432e-007;
 		};
 	};
 	class Connections

@@ -42,19 +42,6 @@ if (_iamuavop) then {
 	player addAction ["Load new UAV software",QS_fnc_actionUAVSoftware,[],20,true,true,'','[] call QS_fnc_conditionUAVSoftware'];
 };
 
-//============================= Mobile arsenal/Mobile Vas
-if (PARAMS_MobileArmory != 0) then {
-	if (PARAMS_MobileArmory == 1) then {
-		player addAction ["Mobile Armory","scripts\VAS\open.sqf",[],10,FALSE,FALSE,'','[] call QS_fnc_conditionMobileArmory'];
-	};
-	if (PARAMS_MobileArmory == 2) then {
-		/* ARSENAL */
-	};
-	if (PARAMS_MobileArmory == 3) then {
-		player addAction ["Mobile Armory","scripts\VAS\open.sqf",[],10,FALSE,FALSE,'','[] call QS_fnc_conditionMobileArmory'];
-	};
-};
-
 //====================== Seating and Clear vehicle inventory stuff
 saving_inventory = FALSE;
 inventory_cleared = FALSE;
@@ -62,14 +49,16 @@ player setVariable ["seated",FALSE];
 player addAction ["Clear vehicle inventory",QS_fnc_actionClearInventory,[],-97,FALSE,FALSE,'','[] call QS_fnc_conditionClearInventory'];
 
 //====================== Right billboard Image Randomiser
-_imageList = [1,2,3,4,5,6];
-_bill = _imageList call BIS_fnc_selectRandom;
+if ( isNil "imageList" ) then { imageList = [1,2,3,4,5,6]; };
+if ( (count imageList) == 0 ) then { imageList = [1,2,3,4,5,6]; };
+_bill = imageList call BIS_fnc_selectRandom;
 if (_bill == 1) then {Bill_2 setObjectTexture [0,"media\images\billboard1.paa"]};
 if (_bill == 2) then {Bill_2 setObjectTexture [0,"media\images\billboard2.paa"]};
 if (_bill == 3) then {Bill_2 setObjectTexture [0,"media\images\billboard3.paa"]};
 if (_bill == 4) then {Bill_2 setObjectTexture [0,"media\images\billboard4.paa"]};
 if (_bill == 5) then {Bill_2 setObjectTexture [0,"media\images\billboard5.paa"]};
 if (_bill == 6) then {Bill_2 setObjectTexture [0,"media\images\billboard6.paa"]};
+imageList = imageList - [_bill];
 
 //======================= Remove any rf7800str radio and give a anprc152 instead
 for "_i" from 1 to 999 do {
@@ -94,7 +83,7 @@ if ( call TFAR_fnc_haveSWRadio ) then {
 	[(call TFAR_fnc_activeSwRadio), 6, "350"] call TFAR_fnc_SetChannelFrequency;
 	[(call TFAR_fnc_activeSwRadio), 7, "360"] call TFAR_fnc_SetChannelFrequency;
 	[(call TFAR_fnc_activeSwRadio), 8, "370"] call TFAR_fnc_SetChannelFrequency;
-	systemChat "ShortWave Frequencies set";
+	//systemChat "ShortWave Frequencies set";
 };
 
 //======================= Configure LongRange radio if player got one
@@ -108,7 +97,7 @@ if ( call TFAR_fnc_haveLRRadio ) then {
 	[(call TFAR_fnc_activeLrRadio), 7, "110"] call TFAR_fnc_SetChannelFrequency;
 	[(call TFAR_fnc_activeLrRadio), 8, "120"] call TFAR_fnc_SetChannelFrequency;
 	[(call TFAR_fnc_activeLrRadio), 9, "130"] call TFAR_fnc_SetChannelFrequency;
-	systemChat "LongRange Frequencies set";
+	//systemChat "LongRange Frequencies set";
 };
 
 //======================= Auto Earplugs

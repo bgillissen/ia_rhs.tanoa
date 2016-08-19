@@ -32,9 +32,10 @@ _missionList = [
 	"priorityARTY",
 	"priorityROCKET",
 	"secureChopper",
+	"secureRadar",
 	"secureIntelUnit",
-	"secureIntelVehicle",
-	"secureRadar"
+	"secureIntelVehicle"
+	
 ];
 
 SM_SWITCH = true; publicVariable "SM_SWITCH";

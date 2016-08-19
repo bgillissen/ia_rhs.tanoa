@@ -226,19 +226,9 @@ while { sideMissionUp } do {
 	//-------------------------------------------- THE ENEMY IS TRYING TO ESCAPE
 	
 	if (GETTING_AWAY) then {
-	
 		sleep 0.3;
-			
-		//_targetTrigger attachTo [_intelObj,[0,0,0]];
-	
 		if (count list _targetTrigger < 1) then {
-	
-			sleep 0.3;
-		
-			HE_ESCAPED = true;
-			
-			sleep 0.3;
-			
+			HE_ESCAPED = true;		
 			GETTING_AWAY = false;
 		};
 	};

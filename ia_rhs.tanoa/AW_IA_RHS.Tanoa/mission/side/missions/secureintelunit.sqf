@@ -246,35 +246,21 @@ while { sideMissionUp } do {
 	//-------------------------------------------- THE ENEMY IS TRYING TO ESCAPE
 	
 	if (GETTING_AWAY) then {
-	
-		sleep 5;  // too long?
-			
-		//_targetTrigger attachTo [_intelObj,[0,0,0]];
-	
+		sleep 1;  // too long?
 		if (count list _targetTrigger < 1) then {
-	
-			sleep 0.3;
-		
 			HE_ESCAPED = true;
-			
-			sleep 0.3;
-			
 			GETTING_AWAY = false;
 		};
 		
-		//---------- DETECT IF HE SURRENDERS
-	
+		//---------- DETECT IF HE SURRENDERS	
 		if (HE_SURRENDERS) then {
-
-			sleep 0.3;
-		
+			sleep 0.3;	
 			removeAllWeapons _intelObj;
 			_intelObj playAction "Surrender";
 			_intelObj disableAI "ANIM";	
 			[_intelObj] joinSilent _surrenderGroup;
 			
 			//----- REMOVE 'SURRENDER' ACTION
-			
 			[_intelObj,"QS_fnc_removeAction1",nil,true] spawn BIS_fnc_MP; 
 		};
 		

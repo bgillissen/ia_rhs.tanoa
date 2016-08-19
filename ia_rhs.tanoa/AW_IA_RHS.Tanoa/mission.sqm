@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1860;
+		nextID=1861;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2344.866,126.51424,13454.123};
-		dir[]={0.47020298,-0.63456213,-0.61357892};
-		up[]={0.38598514,0.7728011,-0.50367725};
-		aside[]={-0.79383337,-9.8763849e-007,-0.60833549};
+		pos[]={2536.1829,92.082985,13510.384};
+		dir[]={-0.58147317,-0.43330315,-0.68875283};
+		up[]={-0.27955687,0.90116227,-0.33113688};
+		aside[]={-0.76419961,-1.4931284e-006,0.64517349};
 	};
 };
 binarizationWanted=0;
@@ -546,7 +546,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=580;
+		items=579;
 		class Item0
 		{
 			dataType="Logic";
@@ -26195,21 +26195,6 @@ class Mission
 			angle=28.727997;
 			id=1858;
 			atlOffset=-13.45;
-		};
-		class Item579
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2370.7195,15.509334,13416.18};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=1859;
-			type="RHS_AH64D_GS";
 		};
 	};
 	class Connections

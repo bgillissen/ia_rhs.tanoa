@@ -1,21 +1,21 @@
-	private ["_veh","_vehName","_vehVarname","_completeText","_reward","_GAU","_rabbit","_mortar"];
+	private ["_smRewards","_veh","_vehName","_vehVarname","_completeText","_reward","_GAU","_rabbit","_mortar"];
 
-smRewards =
+_smRewards =
 [
 	["an UH-1Y Unarmed", "RHS_UH1Y_UNARMED_d"],
 	["an UH-1Y FFAR", "RHS_UH1Y_FFAR_d"],
 	["an AH1Z Ground Support", "RHS_AH1Z_GS"],
 	["an AH64D Ground Support", "RHS_AH64D_GS"],
-	["a RG33 M2", "rhsusf_rg33_m2uusmc_d"],
+	["a RG33 M2", "rhsusf_rg33_m2_usmc_wd"],
 	["an Offraod (Repair)", "C_Offroad_01_repair_F"],
 	["a Mobile Mortar Truck", "B_G_Offroad_01_repair_F"],
 	["a M113 M2", "rhsusf_m113d_usarmy"],
 	["a M109 Artillery Tank", "rhsusf_m109d_usarmy"],
 	["a BM-21 Atillery Truck", "rhsgref_cdf_b_reg_BM21"],
-	["a T-90", "rhst90_tv"] 
+	["a T-90", "rhs_t90_tv"] 
 ];
 
-_veh = smRewards call BIS_fnc_selectRandom;
+_veh = _smRewards call BIS_fnc_selectRandom;
 _vehName = _veh select 0;
 _vehVarname = _veh select 1;
 

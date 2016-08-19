@@ -41,13 +41,13 @@ _c4Message = ["Chopper data secured. The charge has been set! 30 seconds until d
 
 //-------------------- SPAWN OBJECTIVE
 
-	_randomDir = (random 360);
-	_hangar = "Land_TentHangar_V1_F" createVehicle _flatPos;
-	waitUntil {!isNull _hangar};
-	_hangar setPos [(getPos _hangar select 0), (getPos _hangar select 1), ((getPos _hangar select 2) - 1)];
+	//_randomDir = (random 360);
+	//_hangar = "Land_TentHangar_V1_F" createVehicle _flatPos;
+	//waitUntil {!isNull _hangar};
+	//_hangar setPos [(getPos _hangar select 0), (getPos _hangar select 1), ((getPos _hangar select 2) - 1)];
 	sideObj = [CHOPPER_TYPE] call BIS_fnc_selectRandom createVehicle _flatPos;
 	waitUntil {!isNull sideObj};
-	{_x setDir _randomDir} forEach [sideObj,_hangar];
+	//{_x setDir _randomDir} forEach [sideObj,_hangar];
 	sideObj lock 3;
 	
 	house = "Land_Cargo_House_V3_F" createVehicle _objPos;
@@ -135,7 +135,7 @@ while { sideMissionUp } do {
 		//--------------------- DELETE
 		sleep 120;
 		{ deleteVehicle _x } forEach [sideObj,house];
-		deleteVehicle nearestObject [getPos sideObj,"Land_TentHangar_V1_ruins_F"];
+		//deleteVehicle nearestObject [getPos sideObj,"Land_TentHangar_V1_ruins_F"];
 		[_enemiesArray] spawn QS_fnc_SMdelete;
 	};
 };

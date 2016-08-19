@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1856;
+		nextID=1860;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2358.9761,126.51424,13492.029};
-		dir[]={0.12186737,-0.46462297,-0.87722051};
-		up[]={0.063942581,0.88542396,-0.46025401};
-		aside[]={-0.99060917,-1.066117e-006,-0.13762033};
+		pos[]={2344.866,126.51424,13454.123};
+		dir[]={0.47020298,-0.63456213,-0.61357892};
+		up[]={0.38598514,0.7728011,-0.50367725};
+		aside[]={-0.79383337,-9.8763849e-007,-0.60833549};
 	};
 };
 binarizationWanted=0;
@@ -546,7 +546,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=577;
+		items=580;
 		class Item0
 		{
 			dataType="Logic";
@@ -6533,7 +6533,7 @@ class Mission
 		class Item196
 		{
 			dataType="Marker";
-			position[]={2204.2354,1.2666786e+018,13413.632};
+			position[]={2207.76,1.2666786e+018,13409.927};
 			name="respawn_jet";
 			type="Empty";
 			id=1076;
@@ -11398,7 +11398,7 @@ class Mission
 		class Item320
 		{
 			dataType="Marker";
-			position[]={2464.3042,13.45,13399.721};
+			position[]={2460.5854,13.455553,13399.831};
 			name="smReward1";
 			type="Empty";
 			angle=28.728455;
@@ -11407,16 +11407,17 @@ class Mission
 		class Item321
 		{
 			dataType="Marker";
-			position[]={2476.7397,13.166195,13404.641};
+			position[]={2471.5989,13.435843,13403.384};
 			name="smReward2";
 			type="Empty";
 			angle=121.50964;
 			id=1331;
+			atlOffset=9.5367432e-007;
 		};
 		class Item322
 		{
 			dataType="Marker";
-			position[]={2451.4243,13.5981,13395.826};
+			position[]={2451.1506,13.56684,13397.084};
 			name="smReward3";
 			type="Empty";
 			angle=28.728455;
@@ -11598,17 +11599,16 @@ class Mission
 		class Item341
 		{
 			dataType="Marker";
-			position[]={2482.2163,13.450001,13364.816};
+			position[]={2476.4197,13.45,13363.122};
 			name="smReward24";
 			type="Empty";
 			angle=151.23868;
 			id=1351;
-			atlOffset=9.5367432e-007;
 		};
 		class Item342
 		{
 			dataType="Marker";
-			position[]={2485.9209,13.434942,13375.651};
+			position[]={2483.2412,13.456448,13371.167};
 			name="smReward25";
 			type="Empty";
 			angle=151.23868;
@@ -11617,22 +11617,20 @@ class Mission
 		class Item343
 		{
 			dataType="Marker";
-			position[]={2488.7988,12.850001,13386.883};
+			position[]={2487.7598,13.101791,13380.267};
 			name="smReward26";
 			type="Empty";
 			angle=151.23868;
 			id=1353;
-			atlOffset=9.5367432e-007;
 		};
 		class Item344
 		{
 			dataType="Marker";
-			position[]={2491.9648,12.850001,13398.696};
+			position[]={2491.9863,12.85,13389.468};
 			name="smReward27";
 			type="Empty";
 			angle=151.23868;
 			id=1354;
-			atlOffset=9.5367432e-007;
 		};
 		class Item345
 		{
@@ -26178,6 +26176,40 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item577
+		{
+			dataType="Marker";
+			position[]={2436.8499,13.648267,13392.829};
+			name="smReward4";
+			type="Empty";
+			angle=28.727997;
+			id=1857;
+		};
+		class Item578
+		{
+			dataType="Marker";
+			position[]={2480.2849,4.3024629e-036,13454.581};
+			name="smReward18";
+			type="Empty";
+			angle=28.727997;
+			id=1858;
+			atlOffset=-13.45;
+		};
+		class Item579
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2370.7195,15.509334,13416.18};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1859;
+			type="RHS_AH64D_GS";
 		};
 	};
 	class Connections

@@ -5,7 +5,7 @@ smRewards =
 	["an UH-1Y Unarmed", "RHS_UH1Y_UNARMED_d"],
 	["an UH-1Y FFAR", "RHS_UH1Y_FFAR_d"],
 	["an AH1Z Ground Support", "RHS_AH1Z_GS"],
-	["an UH64D Ground Support", "RHS_UH64D_GS"],
+	["an AH64D Ground Support", "RHS_AH64D_GS"],
 	["a RG33 M2", "rhsusf_rg33_m2uusmc_d"],
 	["an Offraod (Repair)", "C_Offroad_01_repair_F"],
 	["a Mobile Mortar Truck", "B_G_Offroad_01_repair_F"],

@@ -19,7 +19,7 @@ ______________________________________________*/
 private ["_mission","_missionList","_currentMission","_nextMission","_delay","_loopTimeout"];
 
 //_delay = 300 + (random 600);
-_delay = 30;
+_delay = 60;
 _loopTimeout = 10 + (random 10);
 
 _missionList = [	

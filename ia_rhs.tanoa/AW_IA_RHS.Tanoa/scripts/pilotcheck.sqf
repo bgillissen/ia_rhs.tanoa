@@ -1,9 +1,5 @@
-// Original pilotcheck by Kamaradski [AW]. 
-// Since then been tweaked by many hands!
-// Notable contributors: chucky [allFPS], Quiksilver.
-
-_helipilots = ["rhsusf_army_ocp_helipilot"];
-_jetpilots = ["rhsusf_airforce_jetpilot"];
+_helipilots = ["rhsusf_army_ocp_helipilot", "rhsusf_airforce_jetpilot"];
+_jetpilots = ["rhsusf_airforce_jetpilot", "rhsusf_army_ocp_helipilot"];
 
 _heli_nocopilot = ["RHS_UH60M", 
 				   "RHS_UH60M_MEV2",
@@ -34,7 +30,7 @@ while { true } do {
 			if(!_iamhelipilot) then {
 				_forbidden = [driver _veh];
 				if (player in _forbidden) then {
-					systemChat "You must be a helicopter pilot to fly this helicopter";
+					systemChat "You must be a pilot to fly this helicopter";
 					player action ["getOut", _veh];
 				};
 			};
@@ -44,7 +40,7 @@ while { true } do {
 			if(!_iamjetpilot) then {
 				_forbidden = [driver _veh];
 				if (player in _forbidden) then {
-					systemChat "You must be a jet pilot to fly this aircraft";
+					systemChat "You must be a pilot to fly this aircraft";
 					player action ["getOut", _veh];
 				};
 				_forbidden = [_veh turretUnit [0]];

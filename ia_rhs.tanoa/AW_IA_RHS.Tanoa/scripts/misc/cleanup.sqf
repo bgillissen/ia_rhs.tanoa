@@ -26,9 +26,4 @@ while {true} do {
 			};
 		};
 	};
-	if (!isNull heliFuelTruck) then {
-		heliFuelTruck setFuelCargo 1;
-	};
 };
-
-

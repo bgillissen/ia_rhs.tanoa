@@ -205,6 +205,7 @@ vas_weapons = [
         "rhs_weap_m4a1_blockII_M203_wd",
         "rhs_weap_sr25",
         "rhs_weap_sr25_ec",
+        "rhs_weap_sr25_ec_wd",
         "rhs_weap_XM2010",
         "rhs_weap_XM2010_d",
         "rhs_weap_XM2010_sa",

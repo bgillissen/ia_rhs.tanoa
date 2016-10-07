@@ -170,7 +170,7 @@ while { canMove priorityObj1 || canMove priorityObj2 } do {
 			if (!isNull _unit) then {
 				_targetPos = getPos _unit;
 				
-				if ((_targetPos distance (getMarkerPos "mortarsafe")) > 150 && (_targetPos distance (getMarkerPos "respawn_west")) > 1000 && vehicle _unit == _unit && side _unit == WEST) then { 
+				if ((_targetPos distance (getMarkerPos "mortarsafe")) > 500 && (_targetPos distance (getMarkerPos "respawn_west")) > 1000 && vehicle _unit == _unit && side _unit == WEST) then { 
 					_accepted = true; 
 				} else {
 					sleep 7;																// default 10

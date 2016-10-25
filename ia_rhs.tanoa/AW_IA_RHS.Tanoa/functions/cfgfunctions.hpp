@@ -15,6 +15,7 @@ class QS
 		class AOenemy {};
 		class AOminefield {};
 		class casRespawn {};
+		class clearFog {};
 		class clearPosition {};
 		class conditionAirDrop {};
 		class conditionClearInventory {};

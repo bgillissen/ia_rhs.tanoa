@@ -16,4 +16,4 @@ ___________________________________________________________________________*/
 
 0 setFog 0;
 forceWeatherChange;
-systemChat "Fog Cleared";
+999999 setFog 0;

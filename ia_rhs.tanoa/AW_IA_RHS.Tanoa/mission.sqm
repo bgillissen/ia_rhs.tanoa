@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2326.8132,24.298697,13157.186};
-		dir[]={-0.64769858,-0.68919015,-0.32482231};
-		up[]={-0.61605966,0.72457868,-0.3089554};
-		aside[]={-0.4482877,-2.681918e-008,0.89389026};
+		pos[]={2319.8755,20.720322,13173.308};
+		dir[]={0.47493073,-0.37287501,-0.79716778};
+		up[]={0.19084921,0.9278788,-0.32033902};
+		aside[]={-0.85912305,3.6950223e-007,-0.51183981};
 	};
 };
 binarizationWanted=0;
@@ -568,8 +568,8 @@ class Mission
 		minute=0;
 		startFogBase=250;
 		forecastFogBase=250;
-		startFogDecay=0.014;
-		forecastFogDecay=0.014;
+		startFogDecay=0;
+		forecastFogDecay=0;
 	};
 	class Entities
 	{
@@ -14121,7 +14121,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="this setFlagTexture ""media\images\tfu_flag.paa"";";
+				init="this setFlagTexture ""media\images\tfu_flag.paa"";this addAction [""Clear Fog"",""remoteExec ['QS_fnc_clearFog',2]"",[],10,true,true,'((player distance _target) < 5)'];";
 			};
 			id=1445;
 			type="FlagPole_F";

@@ -52,3 +52,6 @@ missionNamespace setVariable ["SA_TOW_RULES_OVERRIDE", [	["Car", 	"CAN_TOW", "Ca
 															["Truck", 	"CAN_TOW", "Car"], 
 															["Ship", 	"CAN_TOW", "Ship"] 
 													   ], true];
+													   
+//HeadLess Load balancing
+[] execVM "scripts\passToHCs.sqf";

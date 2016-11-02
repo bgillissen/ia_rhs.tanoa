@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1953;
+		nextID=1958;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2319.8755,20.720322,13173.308};
-		dir[]={0.47493073,-0.37287501,-0.79716778};
-		up[]={0.19084921,0.9278788,-0.32033902};
-		aside[]={-0.85912305,3.6950223e-007,-0.51183981};
+		pos[]={5014.7671,10.33223,11458};
+		dir[]={-0.93419349,-0.23936516,-0.26467243};
+		up[]={-0.23031555,0.970927,-0.065252878};
+		aside[]={-0.27259845,-6.5431959e-007,0.9621678};
 	};
 };
 binarizationWanted=0;
@@ -107,13 +107,14 @@ addons[]=
 	"A3_Structures_F_Exp_Commercial_Warehouses",
 	"A3_Structures_F_Exp_Commercial_Addons",
 	"A3_Structures_F_Households_Stone_Big",
-	"A3_Structures_F_Dominants_WIP"
+	"A3_Structures_F_Dominants_WIP",
+	"rhsusf_c_m1a2"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=49;
+		items=50;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -453,6 +454,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
+		class Item49
+		{
+			className="rhsusf_c_m1a2";
+			name="M1A2 Tanks";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
 	};
 };
 randomSeed=12866018;
@@ -573,7 +581,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=632;
+		items=637;
 		class Item0
 		{
 			dataType="Logic";
@@ -6064,7 +6072,7 @@ class Mission
 					};
 					id=1061;
 					type="B_UAV_AI";
-					atlOffset=2.9563904e-005;
+					atlOffset=0.010000229;
 				};
 				class Item1
 				{
@@ -6082,7 +6090,7 @@ class Mission
 					};
 					id=1062;
 					type="B_UAV_AI";
-					atlOffset=2.9563904e-005;
+					atlOffset=0.010000229;
 				};
 			};
 			class Attributes
@@ -6121,7 +6129,7 @@ class Mission
 				};
 			};
 			id=1060;
-			atlOffset=2.9563904e-005;
+			atlOffset=0.010000229;
 		};
 		class Item188
 		{
@@ -6142,7 +6150,7 @@ class Mission
 			};
 			id=1063;
 			type="B_UAV_02_CAS_F";
-			atlOffset=2.9563904e-005;
+			atlOffset=0.010000229;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -27002,6 +27010,222 @@ class Mission
 			};
 			id=1952;
 			type="Target_PopUp_Moving_90deg_F";
+		};
+		class Item632
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4988.9194,3.9757347,11446.06};
+				angles[]={6.2725215,1.0599734,0.016004669};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				textures="standard";
+			};
+			id=1953;
+			type="RHS_M2A3_BUSKIII";
+			atlOffset=-0.0081808567;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="rhs_hideDUKE";
+					expression="_this animate ['DUKE_Hide',_value,true];if(_value isEqualTo 1)then{_this removeWeaponTurret ['rhsusf_weap_duke',[0,0]]};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item633
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4992.4263,2.6105504,11437.61};
+				angles[]={0.074528553,0.85378647,0.058599081};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				textures="woodland";
+			};
+			id=1954;
+			type="rhsusf_m1a2sep1tuskiid_usarmy";
+			atlOffset=0.020958662;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="rhs_ammoslot_2_type";
+					expression="_this setVariable ['rhs_ammoslot_2_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="rhs_mag_M829A3";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="rhs_ammoslot_1_type";
+					expression="_this setVariable ['rhs_ammoslot_1_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="rhs_mag_M829A3";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="rhs_decalPlatoon_type";
+					expression="_this setVariable ['rhs_decalPlatoon_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="ArmyPlt_Abrams_WD";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="rhs_hideDUKE";
+					expression="_this animate ['DUKE_Hide',_value,true];if(_value isEqualTo 1)then{_this removeWeaponTurret ['rhsusf_weap_duke',[0,0]]};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="rhs_decalBarrel_type";
+					expression="_this setVariable ['rhs_decalBarrel_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="BarrelArt_Abrams_WD";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="rhs_ammoslot_3_type";
+					expression="_this setVariable ['rhs_ammoslot_3_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="rhs_mag_M829A3";
+						};
+					};
+				};
+				nAttributes=6;
+			};
+		};
+		class Item634
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={20.433239,0.51287842,15337.279};
+			};
+			name="HC";
+			isPlayable=1;
+			id=1955;
+			type="HeadlessClient_F";
+			atlOffset=68.764946;
+		};
+		class Item635
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={42.720348,1.4078623,15336.805};
+			};
+			name="HC2";
+			isPlayable=1;
+			id=1956;
+			type="HeadlessClient_F";
+			atlOffset=67.750946;
+		};
+		class Item636
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={66.904312,1.5293694,15338.228};
+			};
+			name="HC3";
+			isPlayable=1;
+			id=1957;
+			type="HeadlessClient_F";
+			atlOffset=67.230957;
 		};
 	};
 	class Connections

@@ -51,9 +51,6 @@ if (player isKindOf "rhsusf_army_ocp_crewman") then {
 //--------------------- Squad Manager
 ["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups;
 
-//--------------------- Fixed Billboard
-Bill_1 setObjectTexture [0,"media\images\billboardTFAR.paa"];
-
 //--------------------- Squad Url Hint
 _infoArray = squadParams player;    
 _infoSquad = _infoArray select 0;

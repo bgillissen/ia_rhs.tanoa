@@ -54,6 +54,7 @@ if (_bill == 4) then {Bill_2 setObjectTexture [0,"media\images\billboard4.paa"]}
 if (_bill == 5) then {Bill_2 setObjectTexture [0,"media\images\billboard5.paa"]};
 if (_bill == 6) then {Bill_2 setObjectTexture [0,"media\images\billboard6.paa"]};
 imageList = imageList - [_bill];
+//Bill_2 setObjectTexture [0,"media\images\billboardNoel.paa"];
 
 //======================= Remove any rf7800str radio and give a anprc152 instead
 for "_i" from 1 to 999 do {

@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1;
+		nextID=2;
 	};
 	class Camera
 	{
@@ -15149,7 +15149,7 @@ class Mission
 			};
 			id=1408;
 			type="Land_CampingTable_F";
-			atlOffset=4.0054321e-005;
+			atlOffset=3.7193298e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15332,7 +15332,7 @@ class Mission
 			};
 			id=1411;
 			type="Land_CampingChair_V2_F";
-			atlOffset=4.0054321e-005;
+			atlOffset=3.9100647e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -34308,6 +34308,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="0 = [this,30,FALSE,QS_fnc_vSetup02] spawn QS_fnc_vMonitor;";
 				textures="standard";
 			};
 			id=1953;
@@ -34368,6 +34369,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="0 = [this,30,FALSE,QS_fnc_vSetup02] spawn QS_fnc_vMonitor;";
 				textures="woodland";
 			};
 			id=1954;
@@ -35446,7 +35448,7 @@ class Mission
 			dataType="Layer";
 			name="Roadblock";
 			id=1983;
-			atlOffset=0.04706955;
+			atlOffset=60.779999;
 		};
 	};
 	class Connections

@@ -63,10 +63,20 @@ _email = _infoSquad select 2;
 if (_email == "rainman@taskforceunicorn.com") then {
 	_GlobalHint = format["<t align='center' size='2.2' color='#FAAF3A'>%1<br/></t><t size='1.4' color='#33CCFF'>%2</t><br/>has joined the server, To become a TFU member, apply to taskforceunicorn.com</t><br/>",_squad,_name];
 	[_GlobalHint] remoteExec ["AW_fnc_globalHint",0,false];
+} else {
+	private _helipilots = ["rhsusf_army_ocp_helipilot", "rhsusf_airforce_jetpilot"];
+	private _jetpilots = ["rhsusf_airforce_jetpilot", "rhsusf_army_ocp_helipilot"];
+	private _snipers = ["rhsusf_army_ocp_sniper"];
+	 
+	private _isHPilot = (({typeOf player == _x} count _helipilots) > 0);
+	private _isJPilot = (({typeOf player == _x} count _jetpilots) > 0);
+	private _isSniper = (({typeOf player == _x} count _snipers) > 0);
+	
+	if ( _isHPilot || _isJPilot || isSniper ) then {
+		[] spawn {
+			cutText ["Pilot and sniper classes are restricted to members of TFU only. Apply for membership at http://taskforceunicorn.com . Controls will freeze in 20 seconds.", "PLAIN"];
+			sleep 20;
+			disableUserInput true;
+		};	
+	};
 };
-
-
-
-
-
-

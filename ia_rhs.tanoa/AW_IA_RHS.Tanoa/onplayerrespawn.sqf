@@ -18,7 +18,25 @@ private ["_iamhelipilot"];
 waitUntil {!isNull player};
 waitUntil {player == player};
 
-
+if ( !isTFU ) then {
+	private _helipilots = ["rhsusf_army_ocp_helipilot", "rhsusf_airforce_jetpilot"];
+	private _jetpilots = ["rhsusf_airforce_jetpilot", "rhsusf_army_ocp_helipilot"];
+	private _snipers = ["rhsusf_army_ocp_sniper"];
+	 
+	private _isHPilot = (({typeOf player == _x} count _helipilots) > 0);
+	private _isJPilot = (({typeOf player == _x} count _jetpilots) > 0);
+	private _isSniper = (({typeOf player == _x} count _snipers) > 0);
+	
+	if ( _isHPilot || _isJPilot || _isSniper ) exitWith {
+		[] spawn {
+			systemChat "warning";
+			99 cutText ["Pilot and sniper classes are restricted to members of TFU only. Apply for membership at http://taskforceunicorn.com .\nControls will freeze in 30 seconds.\n\nYou better go back to the lobby and change your slot or you will have to kill game!", "BLACK", 2, true];
+			sleep 30;
+			100 cutText ["Sorry, but you have been warned", "BLACK", 1, true];
+			disableUserInput true;
+		};
+	};
+};
 //=========================== Fatigue setting
 if (PARAMS_Fatigue == 0) then {player enableFatigue FALSE;};
 

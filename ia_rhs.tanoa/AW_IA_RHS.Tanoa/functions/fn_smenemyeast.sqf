@@ -107,7 +107,7 @@ _enemiesArray = _enemiesArray + [_SMvehPatrol];
 } foreach allCurators;
 
 //---------- VEHICLE AA
-	
+
 _randomPos = [[[getPos sideObj, 300],[]],["water","out"]] call BIS_fnc_randomPos;
 _SMaa = "rhs_zsu234_aa" createVehicle _randomPos;
 waitUntil {sleep 0.5; !isNull _SMaa};

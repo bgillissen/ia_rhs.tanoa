@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1986;
+		nextID=1991;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=3;
+		nextID=9;
 	};
 	class Camera
 	{
-		pos[]={2305.3594,28.729006,13228.31};
-		dir[]={0.84407783,-0.40160939,0.35565928};
-		up[]={0.37023559,0.91574001,0.15600601};
-		aside[]={0.38834485,3.877969e-006,-0.92164373};
+		pos[]={2435.5901,20.515293,13373.662};
+		dir[]={-0.014205988,-0.42040691,-0.90736556};
+		up[]={-0.006579489,0.9072569,-0.4205012};
+		aside[]={-0.99999374,3.6646397e-006,0.015651118};
 	};
 };
 binarizationWanted=0;
@@ -344,7 +344,9 @@ class AddonsMetaData
 		class Item32
 		{
 			className="rhsusf_sounds";
-			name="rhsusf_sounds";
+			name="USF Sounds";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
 		};
 		class Item33
 		{
@@ -569,7 +571,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=651;
+		items=655;
 		class Item0
 		{
 			dataType="Logic";
@@ -25895,7 +25897,7 @@ class Mission
 			};
 			id=1687;
 			type="rhsusf_m1025_d";
-			atlOffset=-0.088000298;
+			atlOffset=-0.095161438;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -26111,7 +26113,7 @@ class Mission
 			};
 			id=1688;
 			type="rhsusf_m998_d_2dr";
-			atlOffset=0.020000458;
+			atlOffset=0.014012337;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -26411,6 +26413,7 @@ class Mission
 			};
 			id=1689;
 			type="rhsusf_m1025_d_m2";
+			atlOffset=-2.1027184;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -26626,7 +26629,7 @@ class Mission
 			};
 			id=1691;
 			type="rhsusf_m1025_d_m2";
-			atlOffset=-9.5367432e-007;
+			atlOffset=-2.103302;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -26842,7 +26845,7 @@ class Mission
 			};
 			id=1692;
 			type="rhsusf_m998_d_4dr";
-			atlOffset=-0.0010004044;
+			atlOffset=0.0049877167;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -27114,7 +27117,7 @@ class Mission
 			};
 			id=1693;
 			type="rhsusf_m998_d_4dr_fulltop";
-			atlOffset=0.010000229;
+			atlOffset=0.015989304;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -27619,7 +27622,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2434.738,15.387495,13362.118};
+				position[]={2434.7378,15.387585,13362.118};
 				angles[]={0,4.7008176,0};
 			};
 			side="Empty";
@@ -27627,12 +27630,10 @@ class Mission
 			class Attributes
 			{
 				lock="LOCKED";
-				createAsSimpleObject=1;
-				disableSimulation=1;
 			};
 			id=1703;
 			type="rhsusf_M1083A1P2_B_M2_d_Medical_fmtv_usarmy";
-			atlOffset=-0.017089844;
+			atlOffset=-0.017000198;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -28155,7 +28156,6 @@ class Mission
 				angles[]={0.021327924,0.4427202,6.2725215};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				lock="LOCKED";
@@ -28165,7 +28165,7 @@ class Mission
 			};
 			id=1734;
 			type="rhsusf_M977A4_REPAIR_usarmy_d";
-			atlOffset=0.0039997101;
+			atlOffset=0.3838377;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -28228,6 +28228,7 @@ class Mission
 			};
 			id=1735;
 			type="rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d";
+			atlOffset=-0.32663059;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -28481,7 +28482,6 @@ class Mission
 				angles[]={0,2.5281618,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				lock="LOCKED";
@@ -28491,6 +28491,7 @@ class Mission
 			};
 			id=1762;
 			type="rhsusf_M977A4_REPAIR_usarmy_d";
+			atlOffset=0.38107681;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -28772,6 +28773,7 @@ class Mission
 			};
 			id=1778;
 			type="RHS_UH60M";
+			atlOffset=-0.11443615;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -28850,7 +28852,7 @@ class Mission
 			};
 			id=1779;
 			type="RHS_UH60M_MEV2";
-			atlOffset=-0.00036716461;
+			atlOffset=-0.11459446;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -28892,7 +28894,7 @@ class Mission
 			};
 			id=1780;
 			type="rhsusf_m1025_d_m2";
-			atlOffset=-0.075999737;
+			atlOffset=-2.1942434;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -28972,7 +28974,7 @@ class Mission
 			};
 			id=1781;
 			type="rhsusf_m1025_d_m2";
-			atlOffset=-0.0088477135;
+			atlOffset=-2.1191807;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -34374,7 +34376,7 @@ class Mission
 			};
 			id=1954;
 			type="rhsusf_m1a2sep1tuskiid_usarmy";
-			atlOffset=0.020958662;
+			atlOffset=-1.3890002;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -35449,6 +35451,188 @@ class Mission
 			name="Roadblock";
 			id=1983;
 			atlOffset=60.779999;
+		};
+		class Item651
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2621.918,1.7293222,13724.567};
+				angles[]={0,1.9570551,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="this addAction [""<t color='#ff1111'>VAS</t>"",""scripts\VAS\open.sqf"",[],10,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; this addAction [""Quick Gear Save"",QS_fnc_saveInventory,[],7,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; 0 = [this] execVM ""scripts\VAserver.sqf""; this addAction [""View Distance Settings"",TAWVD_fnc_openTAWVD,[],-98,false,false,"""",''];";
+				disableSimulation=1;
+			};
+			id=1986;
+			type="B_supplyCrate_F";
+			atlOffset=2.4000001;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item652
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2621.5271,1.9602396,13724.208};
+				angles[]={0,3.5411859,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				createAsSimpleObject=1;
+				disableSimulation=1;
+			};
+			id=1988;
+			type="CamoNet_ghex_open_F";
+			atlOffset=0.00021243095;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item653
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2629.5601,3.7355733,13726.11};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=1989;
+			type="Land_LampHarbour_F";
+			atlOffset=0.00025224686;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item654
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2614.7329,3.7355733,13731.373};
+				angles[]={0,2.6056659,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=1990;
+			type="Land_LampHarbour_F";
+			atlOffset=0.00025224686;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections

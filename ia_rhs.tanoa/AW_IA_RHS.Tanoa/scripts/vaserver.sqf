@@ -283,7 +283,9 @@ _box = _this select 0;
         //"rhsusf_mag_10Rnd_STD_50BMG_mk211" //explosive sniper ammo
         "rhsusf_5Rnd_762x51_m118_special_Mag",
         "rhsusf_5Rnd_762x51_m993_Mag",
-        "rhsusf_5Rnd_762x51_m62_Mag"
+        "rhsusf_5Rnd_762x51_m62_Mag",
+        
+        "50Rnd_570x28_SMG_03"		//Adr-97
     ],
     true
 ] call BIS_fnc_addVirtualMagazineCargo;
@@ -500,7 +502,24 @@ _box = _this select 0;
         "rhs_weap_hk416d145_m320",
         "rhs_weap_m24sws",
         "rhs_weap_m24sws_blk",
-        "rhs_weap_m24sws_ghillie"
+        "rhs_weap_m24sws_ghillie",
+        
+        "SMG_03_black",	//ADR-97
+        "SMG_03_camo",
+        "SMG_03_camo",
+        "SMG_03_khaki",
+        "SMG_03_TR_black",
+        "SMG_03_TR_camo",
+        "SMG_03_TR_hex",
+        "SMG_03_TR_khaki",
+        "SMG_03C_black",
+        "SMG_03C_camo",
+        "SMG_03C_hex",
+        "SMG_03C_khaki",
+        "SMG_03C_TR_black",
+        "SMG_03C_TR_camo",
+        "SMG_03C_TR_hex",
+        "SMG_03C_TR_khaki"
     ],
     true
 ] call BIS_fnc_addVirtualWeaponCargo;
@@ -895,7 +914,9 @@ _box = _this select 0;
         "rhsusf_opscore_mc_cover_pelt",
         "rhsusf_opscore_rg_cover",
         "rhsusf_opscore_rg_cover_pelt",
-        "rhsusf_opscore_ut"
+        "rhsusf_opscore_ut",
+        
+        "muzzle_snds_570"
     ],
     true
 ] call BIS_fnc_addVirtualItemCargo;

@@ -30,10 +30,9 @@ if ( !isTFU ) then {
 	if ( _isHPilot || _isJPilot || _isSniper ) exitWith {
 		[] spawn {
 			systemChat "warning";
-			99 cutText ["Pilot and sniper classes are restricted to members of TFU only. Apply for membership at http://taskforceunicorn.com .\nControls will freeze in 30 seconds.\n\nYou better go back to the lobby and change your slot or you will have to kill game!", "BLACK", 2, true];
-			sleep 30;
-			100 cutText ["Sorry, but you have been warned", "BLACK", 1, true];
-			disableUserInput true;
+			99 cutText ["Pilot and sniper classes are restricted to members of TFU only. Apply for membership at http://taskforceunicorn.com.", "BLACK", 2, true];
+			sleep 15;
+			endMission "NOT_ALLOWED";
 		};
 	};
 };

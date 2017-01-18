@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=9;
+		nextID=10;
 	};
 	class Camera
 	{
@@ -22724,7 +22724,7 @@ class Mission
 						skill=0.60000002;
 						init="(group this) setGroupId [""SUPPORT""];";
 						name="sniper";
-						description="Sniper";
+						description="Sniper (restricted)";
 						isPlayable=1;
 						class Inventory
 						{
@@ -25470,8 +25470,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2435.1775,12.783844,13300.079};
-						angles[]={0.0026520467,5.9476981,6.1848373};
+						position[]={2435.177,12.783885,13300.08};
+						angles[]={0.0026529003,5.9476981,6.1848359};
 					};
 					side="West";
 					flags=4;
@@ -25480,7 +25480,7 @@ class Mission
 						skill=0.60000002;
 						init="(group this) setGroupId [""HORNET""];";
 						name="s1";
-						description="Pilot";
+						description="Pilot (restricted)";
 						isPlayable=1;
 						class Inventory
 						{
@@ -25588,6 +25588,7 @@ class Mission
 					};
 					id=1704;
 					type="rhsusf_army_ocp_helipilot";
+					atlOffset=-9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -25617,8 +25618,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2433.0608,12.883573,13298.933};
-						angles[]={6.2671871,6.153193,0};
+						position[]={2433.061,12.883572,13298.933};
+						angles[]={6.2671809,6.153193,0};
 					};
 					side="West";
 					flags=6;
@@ -25628,7 +25629,7 @@ class Mission
 						rank="SERGEANT";
 						init="(group this) setGroupId [""HORNET""];";
 						name="s2";
-						description="Pilot";
+						description="Pilot (restricted)";
 						isPlayable=1;
 						class Inventory
 						{
@@ -25736,6 +25737,7 @@ class Mission
 					};
 					id=1705;
 					type="rhsusf_army_ocp_helipilot";
+					atlOffset=-9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -25776,7 +25778,7 @@ class Mission
 						rank="CORPORAL";
 						init="(group this) setGroupId [""HORNET""];";
 						name="s3";
-						description="Pilot";
+						description="Pilot (restricted)";
 						isPlayable=1;
 						class Inventory
 						{
@@ -25879,6 +25881,7 @@ class Mission
 			{
 			};
 			id=1667;
+			atlOffset=-9.5367432e-007;
 		};
 		class Item491
 		{

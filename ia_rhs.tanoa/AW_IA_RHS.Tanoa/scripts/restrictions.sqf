@@ -19,6 +19,7 @@ private ["_opticsAllowed","_specialisedOptics","_optics","_basePos","_firstRun",
 #define MG_MSG "Only Autoriflemen may use this weapon system. MG removed."
 #define SOPT_MSG "Long range optics are designated for Snipers/Spotters/Marksmans only. Optic removed."
 #define MRK_MSG "Only Marksman and Spotters may use this weapon system. Rifle removed."
+#define BERET_MSG "Only TFU members can use TFU Berets."
 
 //===== UAV TERMINAL
 _uavOperator = ["rhsusf_army_ocp_uav"];
@@ -367,6 +368,21 @@ while {true} do {
         	titleText [AUTOTUR_MSG, "PLAIN", 3];
     	};
     };
+	
+	//------------------------------------- TFU beret
+	if !( isTFU ) then {
+		_tfuBerets = ["H_Beret_TFU_Tan_01", "H_Beret_TFU_Black_01", "H_Beret_TFU_Green_01"];
+		_assignedItems = assignedItems player;
+		if ( ({_x in _tfuBerets} count _assignedItems) > 0 ) then {
+			{
+				player unassignItem _x;
+				player removeItem _x;
+			} forEach _tfuBerets;
+			titleText [BERET_MSG, "PLAIN", 3];
+	    };
+	};
+	sleep 1;
+	
     //===================================== SAFE ZONE MANAGER
     
     _szmkr = getMarkerPos "safezone_marker";

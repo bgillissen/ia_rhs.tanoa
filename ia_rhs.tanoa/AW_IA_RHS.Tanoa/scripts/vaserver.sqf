@@ -916,7 +916,10 @@ _box = _this select 0;
         "rhsusf_opscore_rg_cover_pelt",
         "rhsusf_opscore_ut",
         
-        "muzzle_snds_570"
+        "muzzle_snds_570",		//ADR
+        "H_Beret_TFU_Tan_01",	//rainman's beret
+        "H_Beret_TFU_Black_01",
+        "H_Beret_TFU_Green_01"
     ],
     true
 ] call BIS_fnc_addVirtualItemCargo;

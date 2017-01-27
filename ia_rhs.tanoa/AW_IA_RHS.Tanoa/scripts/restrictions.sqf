@@ -66,6 +66,11 @@ _sniperSpecialised = ["srifle_GM6_F",
                       "srifle_LRR_tna_F",
                       "srifle_LRR_tna_LRPS_F",
                       "srifle_LRR_tna_SOS_F",
+                      "srifle_DMR_04_F",
+                      "srifle_DMR_04_Tan_F",
+                      "srifle_DMR_05_blk_F",
+                      "srifle_DMR_05_hex_F",
+                      "srifle_DMR_05_tan_F",
                       //"rhs_weap_svdp",        no restriction, only available by looting
                       //"rhs_weap_svdp_npz",
                       //"rhs_weap_svdp_wd",
@@ -93,8 +98,15 @@ _sniperOpt = ["optic_SOS",
               "optic_AMS",
               "optic_AMS_khk",
               "optic_AMS_snd",
+              "optic_DMS",
               "rhsusf_acc_LEUPOLDMK4",
-              "rhsusf_acc_LEUPOLDMK4_2"
+              "rhsusf_acc_LEUPOLDMK4_2",
+              "rhsusf_acc_LEUPOLDMK4_2_d",
+              "rhsusf_acc_premier_low",
+              "rhsusf_acc_premier_anpvs27",
+              "rhsusf_acc_M8541_low",
+              "rhsusf_acc_M8541_low_d",
+              "rhsusf_acc_M8541_low_wd"
               ];
 //===== THERMAL OPTICS
 _opticsAllowed = ["rhsusf_usmc_marpat_d_squadleader",
@@ -171,6 +183,9 @@ _autoSpecialised = ["MMG_02_black_F",
                     "arifle_SPAR_02_snd_F",
                     "arifle_SPAR_02_khk_F",
                     "arifle_SPAR_02_blk_F",
+                    "arifle_CTARS_blk_F",
+                    "arifle_CTARS_ghex_F",
+                    "arifle_CTARS_hex_F",
                     "rhs_weap_m240B",
                     "rhs_weap_m240B_CAP",
                     "rhs_weap_m240G",
@@ -180,6 +195,7 @@ _autoSpecialised = ["MMG_02_black_F",
                     "rhs_weap_m249_pip_S",
                     "rhs_weap_m249_pip_S_para",
                     "rhs_weap_m249_pip_S_vfg"
+                    
                     //"rhs_weap_pkm",    //only accessible by looting enemies ;)
                     //"rhs_weap_pkp"
                    ];
@@ -234,7 +250,10 @@ _marksmanGun = ["srifle_DMR_02_ACO_F",
                 "arifle_SPAR_03_khk_F",
                 "arifle_SPAR_03_snd_F",
                 "rhs_weap_sr25",
-                "rhs_weap_sr25_ec"
+                "rhs_weap_sr25_ec",
+                "rhs_weap_m40a5",
+                "rhs_weap_m40a5_d",
+                "rhs_weap_m40a5_wd"
                 ];
 
 

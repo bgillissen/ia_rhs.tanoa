@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2310.0762,36.163025,13199.488};
-		dir[]={0.52131426,-0.34163973,-0.78206718};
-		up[]={0.18952301,0.93980247,-0.28431818};
-		aside[]={-0.83212674,-3.0365482e-007,-0.55468374};
+		pos[]={2300.3359,41.013126,13202.456};
+		dir[]={0.5853489,-0.28126022,-0.76049244};
+		up[]={0.17157033,0.95962334,-0.22290653};
+		aside[]={-0.79248291,-3.4391996e-007,-0.60997266};
 	};
 };
 binarizationWanted=0;
@@ -5873,7 +5873,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="removeAllWeapons this; this allowDamage false;this enablesimulation false;this addAction [""<t color='#ff1111'>VAS</t>"",""scripts\VAS\open.sqf"",[],10,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; this addAction [""Quick Gear Save"",QS_fnc_saveInventory,[],7,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; 0 = [this] execVM ""scripts\VAserver.sqf""; this addAction [""View Distance Settings"",TAWVD_fnc_openTAWVD,[],-98,false,false,"""",''];";
+				init="removeAllWeapons this; this allowDamage false;this addAction [""Quick Gear Save"",QS_fnc_saveInventory,[],7,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; 0 = [this] execVM ""scripts\VAserver.sqf""; this addAction [""View Distance Settings"",TAWVD_fnc_openTAWVD,[],-98,false,false,"""",''];";
 				disableSimulation=1;
 			};
 			id=1042;
@@ -6464,7 +6464,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="removeAllWeapons this; this allowDamage false;this enablesimulation false;this addAction [   ""<t color='#3f3fff'>Request Fuel Container</t>"",   ""scripts\misc\SupplyCrates\Supply_Fuel.sqf"",   [],   21,   true,   true,   """",   '((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [   ""<t color='#3f3fff'>Request Medical Container</t>"",   ""scripts\misc\SupplyCrates\Supply_Med.sqf"",   [],   21,   true,   true,   """",   '((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [   ""<t color='#3f3fff'>Request Repair Container</t>"",   ""scripts\misc\SupplyCrates\Supply_Repair.sqf"",   [],   21,   true,   true,   """",   '((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [   ""<t color='#3f3fff'>Request Ammo Crate</t>"",   ""scripts\misc\SupplyCrates\Supply_ammo.sqf"",   [],   21,   true,   true,   """",   '((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [""<t color='#ff1111'>VAS</t>"",""scripts\VAS\open.sqf"",[],10,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; this addAction [""Quick Gear Save"",QS_fnc_saveInventory,[],7,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; 0 = [this] execVM ""scripts\VAserver.sqf""; this addAction [""View Distance Settings"",TAWVD_fnc_openTAWVD,[],-98,false,false,"""",''];";
+				init="removeAllWeapons this; this allowDamage false;this enablesimulation false;this addAction [   ""<t color='#3f3fff'>Request Fuel Container</t>"",   ""scripts\misc\SupplyCrates\Supply_Fuel.sqf"",   [],   21,   true,   true,   """",   '((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [   ""<t color='#3f3fff'>Request Medical Container</t>"",   ""scripts\misc\SupplyCrates\Supply_Med.sqf"",   [],   21,   true,   true,   """",   '((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [   ""<t color='#3f3fff'>Request Repair Container</t>"",   ""scripts\misc\SupplyCrates\Supply_Repair.sqf"",   [],   21,   true,   true,   """",   '((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [   ""<t color='#3f3fff'>Request Ammo Crate</t>"",   ""scripts\misc\SupplyCrates\Supply_ammo.sqf"",   [],   21,   true,   true,   """",   '((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_Helipilot_F"")'];this addAction [""Quick Gear Save"",QS_fnc_saveInventory,[],7,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; 0 = [this] execVM ""scripts\VAserver.sqf""; this addAction [""View Distance Settings"",TAWVD_fnc_openTAWVD,[],-98,false,false,"""",''];";
 				disableSimulation=1;
 			};
 			id=1068;
@@ -6487,7 +6487,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
 						};
 					};
 				};
@@ -17527,7 +17527,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="removeAllWeapons this; this allowDamage false;this enablesimulation false;this addAction [""<t color='#ff1111'>VAS</t>"",""scripts\VAS\open.sqf"",[],10,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; this addAction [""Quick Gear Save"",QS_fnc_saveInventory,[],7,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; 0 = [this] execVM ""scripts\VAserver.sqf"";this addAction [""View Distance Settings"",TAWVD_fnc_openTAWVD,[],-98,false,false,"""",''];";
+				init="removeAllWeapons this; this allowDamage false;this enablesimulation false; this addAction [""Quick Gear Save"",QS_fnc_saveInventory,[],7,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; 0 = [this] execVM ""scripts\VAserver.sqf"";this addAction [""View Distance Settings"",TAWVD_fnc_openTAWVD,[],-98,false,false,"""",''];";
 				disableSimulation=1;
 			};
 			id=1564;
@@ -25893,7 +25893,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="removeAllWeapons this; this allowDamage false;this enablesimulation false;this addAction [   ""<t color='#3f3fff'>Request Fuel Container</t>"",   ""scripts\misc\SupplyCrates\Supply_Fuel.sqf"",   [],   21,   true,   true,   """",   '((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [   ""<t color='#3f3fff'>Request Medical Container</t>"",   ""scripts\misc\SupplyCrates\Supply_Med.sqf"",   [],   21,   true,   true,   """",   '((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [   ""<t color='#3f3fff'>Request Repair Container</t>"",   ""scripts\misc\SupplyCrates\Supply_Repair.sqf"",   [],   21,   true,   true,   """",   '((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [   ""<t color='#3f3fff'>Request Ammo Crate</t>"",   ""scripts\misc\SupplyCrates\Supply_ammo.sqf"",   [],   21,   true,   true,   """",   '((vehicle player) == player) && ((player distance _target) < 5) && (player isKindOf ""B_Helipilot_F"")'];  this addAction [""<t color='#ff1111'>VAS</t>"",""scripts\VAS\open.sqf"",[],10,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; this addAction [""Quick Gear Save"",QS_fnc_saveInventory,[],7,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; 0 = [this] execVM ""scripts\VAserver.sqf""; this addAction [""View Distance Settings"",TAWVD_fnc_openTAWVD,[],-98,false,false,"""",''];";
+				init="removeAllWeapons this; this allowDamage false;this enablesimulation false; this addAction [""Quick Gear Save"",QS_fnc_saveInventory,[],7,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; 0 = [this] execVM ""scripts\VAserver.sqf""; this addAction [""View Distance Settings"",TAWVD_fnc_openTAWVD,[],-98,false,false,"""",''];";
 				disableSimulation=1;
 			};
 			id=1958;
@@ -26790,7 +26790,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="this addAction [""<t color='#ff1111'>VAS</t>"",""scripts\VAS\open.sqf"",[],10,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; this addAction [""Quick Gear Save"",QS_fnc_saveInventory,[],7,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; 0 = [this] execVM ""scripts\VAserver.sqf""; this addAction [""View Distance Settings"",TAWVD_fnc_openTAWVD,[],-98,false,false,"""",''];";
+				init="this addAction [""Quick Gear Save"",QS_fnc_saveInventory,[],7,true,true,'((vehicle player) == player) && ((player distance _target) < 5)']; 0 = [this] execVM ""scripts\VAserver.sqf""; this addAction [""View Distance Settings"",TAWVD_fnc_openTAWVD,[],-98,false,false,"""",''];";
 				disableSimulation=1;
 			};
 			id=1986;
@@ -26813,7 +26813,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
 						};
 					};
 				};

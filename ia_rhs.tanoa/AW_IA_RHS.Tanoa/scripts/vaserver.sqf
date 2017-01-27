@@ -537,7 +537,7 @@ _box = _this select 0;
         "tf_anprc152",			//TFAR NATO radios
         
         "MineDetector",
-        
+        "B_UavTerminal",
         "G_Aviator",			//VANILLA GOOGLES
         "G_Balaclava_blk",
         "G_Balaclava_combat",

@@ -28,7 +28,8 @@ _uavRestricted = ["B_UavTerminal",
                   "I_UavTerminal"];
 //===== AT-AA / MISSILE LAUNCHERS (excl RPG)
 _missileSoldiers = ["rhsusf_army_ocp_javelin", 
-                    "rhsusf_army_ocp_aa"
+                    "rhsusf_army_ocp_aa",
+                    "rhsusf_usmc_marpat_wd_stinger"
                     ];
 _missileSpecialised = ["launch_NLAW_F",
                        "launch_B_Titan_F",

@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=17;
+		nextID=18;
 	};
 	class Camera
 	{
@@ -28522,8 +28522,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2345.0884,11.842855,13168.383};
-						angles[]={0,4.1127114,0.015998369};
+						position[]={2345.0879,11.842848,13168.383};
+						angles[]={0,4.1127114,0.016004669};
 					};
 					side="West";
 					flags=4;
@@ -28532,7 +28532,7 @@ class Mission
 						skill=0.60000002;
 						init="(group this) setGroupId [""ALPHA""];";
 						name="ab_medic2_2";
-						description="Combat Life Server";
+						description="Combat Life Saver";
 						isPlayable=1;
 						class Inventory
 						{
@@ -28633,7 +28633,6 @@ class Mission
 					};
 					id=2094;
 					type="rhsusf_army_ocp_medic";
-					atlOffset=9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -28663,8 +28662,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2343.8235,11.823216,13170.421};
-						angles[]={6.2805333,4.1127114,0.010664274};
+						position[]={2343.823,11.823209,13170.421};
+						angles[]={6.2805324,4.1127114,0.010663962};
 					};
 					side="West";
 					flags=4;
@@ -28673,7 +28672,7 @@ class Mission
 						skill=0.60000002;
 						init="(group this) setGroupId [""ALPHA""];";
 						name="ab_medic1_2";
-						description="Combat Life Server";
+						description="Combat Life Saver";
 						isPlayable=1;
 						class Inventory
 						{
@@ -28774,7 +28773,6 @@ class Mission
 					};
 					id=2095;
 					type="rhsusf_army_ocp_medic";
-					atlOffset=9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -30596,8 +30594,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2315.7644,11.858603,13151.805};
-						angles[]={0.0026520467,0.94048816,6.272521};
+						position[]={2315.7639,11.85861,13151.805};
+						angles[]={0.0026529003,0.94048816,6.2725215};
 					};
 					side="West";
 					flags=4;
@@ -30606,7 +30604,7 @@ class Mission
 						skill=0.60000002;
 						init="(group this) setGroupId [""BRAVO""];";
 						name="cd_medic2_2";
-						description="Combat Life Server";
+						description="Combat Life Saver";
 						isPlayable=1;
 						class Inventory
 						{
@@ -30736,8 +30734,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2317.0916,11.857726,13149.808};
-						angles[]={0.0080009829,0.94048816,6.272521};
+						position[]={2317.092,11.857721,13149.808};
+						angles[]={0.0079936078,0.94048816,6.2725215};
 					};
 					side="West";
 					flags=4;
@@ -30746,7 +30744,7 @@ class Mission
 						skill=0.60000002;
 						init="(group this) setGroupId [""BRAVO""];";
 						name="cd_medic1_2";
-						description="Combat Life Server";
+						description="Combat Life Saver";
 						isPlayable=1;
 						class Inventory
 						{
@@ -31176,7 +31174,6 @@ class Mission
 					};
 					id=2111;
 					type="rhsusf_army_ocp_grenadier";
-					atlOffset=-9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -31997,6 +31994,7 @@ class Mission
 					};
 					id=2116;
 					type="rhsusf_army_ocp_engineer";
+					atlOffset=1.7166138e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -33062,8 +33060,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2337.8086,12.252111,13150.943};
-						angles[]={0.09834861,5.5139141,0.010669862};
+						position[]={2337.8091,12.25221,13150.943};
+						angles[]={0.098349303,5.5139141,0.010663962};
 					};
 					side="West";
 					flags=4;
@@ -33072,7 +33070,7 @@ class Mission
 						skill=0.60000002;
 						init="(group this) setGroupId [""SUPPORT""];";
 						name="pl_medic_2";
-						description="Combat Life Server";
+						description="Combat Life Saver";
 						isPlayable=1;
 						class Inventory
 						{
@@ -33173,7 +33171,7 @@ class Mission
 					};
 					id=2125;
 					type="rhsusf_army_ocp_medic";
-					atlOffset=0.028906822;
+					atlOffset=0.029000282;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -34319,8 +34317,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2326.3557,11.8243,13166.582};
-						angles[]={0.0026520467,2.522507,0.0026520467};
+						position[]={2326.356,11.824301,13166.582};
+						angles[]={0.0026529003,2.522507,0.0026529003};
 					};
 					side="West";
 					flags=6;
@@ -34330,6 +34328,7 @@ class Mission
 						init="(group this) setGroupId [""HQ""];";
 						name="zeus_2";
 						description="HQ Officer";
+						isPlayer=1;
 						isPlayable=1;
 						class Inventory
 						{

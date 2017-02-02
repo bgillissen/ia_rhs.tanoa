@@ -22,7 +22,7 @@ _null = [] execVM "scripts\jump.sqf";											// jump action
 _null = [] execVM "scripts\misc\diary.sqf";										// diary tabs
 _null = [] execVM "scripts\icons.sqf";											// blufor map tracker Quicksilver
 _null = [] execVM "scripts\VAclient.sqf";										// Virtual Arsenal
-_null = [] execVM "scripts\misc\Intro.sqf";										// AW intro screen
+//_null = [] execVM "scripts\misc\Intro.sqf";										// AW intro screen
 _null = [] execVM "scripts\voice_control\voiceControl.sqf";						// Voice Control
 if (PARAMS_HeliRope != 0) then {call compile preprocessFileLineNumbers "scripts\vehicle\fastrope\zlt_fastrope.sqf";};
 
@@ -61,9 +61,9 @@ if ( !isNil "_infoSquad" ) then {
 	_name = _infoName select 1;
 	_email = _infoSquad select 2;
 	//replace line below with your Squad xml's email
-	/*if (_email == "rainman@taskforceunicorn.com") then {
+	if (_email == "rainman@taskforceunicorn.com") then {
 		isTFU = true;
-		_GlobalHint = format["<t align='center' size='2.2' color='#FAAF3A'>%1<br/></t><t size='1.4' color='#33CCFF'>%2</t><br/>has joined the server, To become a TFU member, apply to taskforceunicorn.com</t><br/>",_squad,_name];
-		[_GlobalHint] remoteExec ["AW_fnc_globalHint",0,false];
-	};*/
+		//_GlobalHint = format["<t align='center' size='2.2' color='#FAAF3A'>%1<br/></t><t size='1.4' color='#33CCFF'>%2</t><br/>has joined the server, To become a TFU member, apply to taskforceunicorn.com</t><br/>",_squad,_name];
+		//[_GlobalHint] remoteExec ["AW_fnc_globalHint",0,false];
+	};
 };

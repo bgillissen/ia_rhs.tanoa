@@ -1,21 +1,21 @@
 //------------------------- On Load
 
 author = Rarek, AhoyWorld, Quiksilver. Tweaked by ben, putin, rainman; // Visible when loading mission
-onLoadName = "TFU - RHS Invade & Annex";				// Visible when loading mission
-OnLoadMission = "Welcome back to Task Force Unicorn Invade and Annex RHS";
+onLoadName = "TFU - Invade & Annex RHS";				// Visible when loading mission
+OnLoadMission = "Welcome back to Task Force Unicorn Invade and Annex with RHS";
 loadScreen = "media\images\loading.jpg";				// Visible when loading mission
-overviewPicture = "media\images\loading.jpg";			// Visible when selecting mission	
+overviewPicture = "media\images\loading.jpg";			// Visible when selecting mission
 
 onLoadIntro = "";										// Displays a message while the intro is loading.
 onLoadIntroTime = 0;									// Time and date displayed while the intro loads. 1 visible, 0 hidden.
 onLoadMissionTime = 0;									// Time and date displayed while the mission loads. 1 visible, 0 hidden.
 
-class Header 
+class Header
 	{
 		gameType = COOP;								// Unknown, COOP, DM, TDM, CTF, SC, CTI, RPG, Sandbox, Seize, Defend.
 		minPlayers = 1;									// Min # of players the MISSION supports
 		maxPlayers = 60;								// Max # of players the MISSION supports, not server slots. Make sure # is greater than server slots.
-	}; 
+	};
 
 //------------------------- Admin
 
@@ -25,7 +25,7 @@ onPauseScript = "scripts\onPause.sqf";
 
 //------------------------- Misc
 
-disableChannels[] = {6};								// 0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System. Admin/server/BattlEye can still use Global. 
+disableChannels[] = {6};								// 0 = Global, 1 = Side, 2 = Command, 3 = Group, 4 = Vehicle, 5 = Direct, 6 = System. Admin/server/BattlEye can still use Global.
 disabledAI = 1;											// No AI in playable units
 aiKills = 0; 											// disable scorelist for AI players
 enableItemsDropping = 0; 								// disabled with 0
@@ -39,20 +39,20 @@ RespawnDelay = 4;										// Delay prior to respawn, ensure longer than BTC rev
 RespawnDialog = 0;										// default = 1. show respawn timer and scoreboard when killed.
 
 //------------------------- Garbage collector
-							
+
 wreckLimit = 5;											// Limit before removal is triggered
 wreckRemovalMinTime = 120;								// Min time before removal
 wreckRemovalMaxTime = 360;								// Max time before removal
-corpseLimit = 5;										// Limit before removal is triggered		
+corpseLimit = 5;										// Limit before removal is triggered
 corpseRemovalMinTime = 60;								// Min time before removal
 corpseRemovalMaxTime = 120;								// Max time before removal
 
 //------------------------- Includes / Functions
-	
+
 #include "scripts\VAS\menu.hpp" 						// VAS
 #include "scripts\taw_vd\dialog.hpp" 					// TAW View Distance
 #include "scripts\vehicle\crew\common.hpp"  			// vehicle crew hud
-#include "scripts\=BTC=_revive\=BTC=_respawn.h"			// BTC medic revive system 
+#include "scripts\=BTC=_revive\=BTC=_respawn.h"			// BTC medic revive system
 #include "dialogs.hpp"									// Intro
 #include "scripts\voice_control\voiceControl.cpp"		// Voice Control
 
@@ -81,7 +81,7 @@ class faction {
 
 //------------------------- Parameters
 
-class Params 
+class Params
 	{
 		class AO {
 				title = "Enable Main AO?";
@@ -89,7 +89,7 @@ class Params
 				texts[] = {"Enabled","Disabled"};
 				default = 1;
 			};
-		
+
 		class DefendAO {
 				title = "Enable Defend AO?";
 				values[] = {1,0};
@@ -110,14 +110,14 @@ class Params
 				texts[] = {"Enabled","Disabled"};
 				default = 1;
 			};
-			
+
 		class EnemyLeftThreshhold {
 				title = "Enemy Left Threshold";
 				values[] = {1,2,3,4,5,6,7,8,9,10};
 				texts[] = {"1","2","3","4","5","6","7","8","9","10"};
 				default = 9;
 			};
-	
+
 		class RadioTowerMineFieldChance {
 				title = "Chance for minefield to spawn around Radio Tower?";
 				values[] = {0,1,2,3,4,5,6,7,8,9,11};
@@ -166,7 +166,7 @@ class Params
 				texts[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
 				default = 5; // default 6... remember, more AI = less FPS
 			};
-	
+
 		class SniperTeamsPatrol {
 				title = "Sniper Teams Patrolling AO";
 				values[] = {0,1,2,3};
@@ -186,7 +186,7 @@ class Params
 				values[] = {0,1,2,3,4,5,6,7};
 				texts[] = {1,2,3,4,5,6,7,8};
 				default = 4; // default 4
-			};	
+			};
 
 		class VEHPatrol {
 				title = "Vehicles Patrolling AO";
@@ -201,84 +201,84 @@ class Params
 				texts[] = {1,2,3,4,5};
 				default = 2; // default 2
 			};
-			
+
 		class AirPatrol {
 				title = "% Chance Of Air Vehicles Patrolling AO";
 				values[] = {0,1,2,3,4,5,6,7,8,9,10};
 				texts[] = {0,10,20,30,40,50,60,70,80,90,100};
 				default = 5; // default 5
 		};
-		
+
 		class EnemiesInBuildings {
 			title = "AO NUMBER OF ENEMIES IN BUILDINGS";
 			values[] = {0,5,10,15,20,25,30,35,40,45,50};
 			texts[] = {"DISABLED","5","10","15","20","25","30","35","40","45","50"};
 			default = 15;
 		};
-			
+
 		class EasterEggs {
 			title = "Enable Easter Eggs?";
 			values[] = {1,0};
 			texts[] = {"Enabled","Disabled"};
 			default = 0;
-		};	
-		
+		};
+
 		class rThermal {
 			title = "Specialise Thermal Optics";
 			values[] = {0,1};
 			texts[] = {"DISABLED","ENABLED"};
 			default = 1;
 		};
-		
+
 		class rLMG {
 			title = "Specialise LMGs";
 			values[] = {0,1};
 			texts[] = {"DISABLED","ENABLED"};
 			default = 1;
 		};
-		
+
 		class rSOptics {
 			title = "Specialise Sniper Optics";
 			values[] = {0,1};
 			texts[] = {"DISABLED","ENABLED"};
 			default = 1;
 		};
-		
+
 		class rMarksman {
 			title = "Restrict Marksman Weapons";
 			values[] = {0,1};
 			texts[] = {"DISABLED","ENABLED"};
 			default = 1;
 		};
-		
+
 		class CasFixedWingSupport {
 			title = "CAS SUPPORT";
 			values[] = {0,1,2,3,4,5};
 			texts[] = {"DISABLED","A-164 WIPEOUT (CAS)","A-143 BUZZARD (AA)","A-143 BUZZARD (CAS)","To-199 NEOPHRON (CAS)","RANDOM"};
 			default = 5;
 		};
-		
+
 		class CasATGM {
 			title = "CAS Air-To-Ground Missiles";
 			values[] = {0,1};
 			texts[] = {"DISABLED","ENABLED"};
 			default = 1;
 		};
-		
+
 		class CasOnStart {
 			title = "CAS at Mission Start";
 			values[] = {0,1};
 			texts[] = {"DISABLED","ENABLED"};
 			default = 0;
 		};
-		
+
 		class PilotRespawn {
 			title = "Pilot Respawn";
 			values[] = {0,1};
 			texts[] = {"DISABLED","ENABLED"};
 			default = 1;
 		};
-		
+
 		class CrewRespawn {
 			title = "Crew Respawn";
 			values[] = {0,1};
@@ -292,35 +292,35 @@ class Params
 		texts[] = {"DISABLED","ENABLED"};
 		default = 0;
 	};
-	
+
 	class HeliRope {
 		title = "Fast Rope";
 		values[] = {0,1};
 		texts[] = {"DISABLED","ENABLED"};
 		default = 1;
 	};
-	
+
 	class HeliDrop {
 		title = "Helicopter Supply Drop";
 		values[] = {0,1};
 		texts[] = {"DISABLED","ENABLED"};
 		default = 1;
 	};
-	
+
 	class MobileArmory {
 		title = "Mobile Armory";
 		values[] = {0,1,2,3};
 		texts[] = {"DISABLED","VAS","ARSENAL","VAS and ARSENAL"};
 		default = 3;
 	};
-	
+
 	class UH80TurretControl {
 		title = "UH-80 Pilot Turret Control";
 		values[] = {0,1};
 		texts[] = {"DISABLED","ENABLED"};
 		default = 1;
 	};
-	
+
 	class VehicleAmmoCargo {				// Can bobcats and ammo HEMTT rearm other vehicles?
 		title = "Vehicle Ammo Cargo";
 		values[] = {0,1};
@@ -510,21 +510,21 @@ class CfgNotifications
 };
 
 /*
-Authors: 
+Authors:
 
 	Quiksilver & Rarek [AW]
-	
-	Invade & Annex 2.00 was developed by Rarek [ahoyworld.co.uk] with hundreds of hours of work, 
+
+	Invade & Annex 2.00 was developed by Rarek [ahoyworld.co.uk] with hundreds of hours of work,
 	The current iterations have been developed by Quiksilver with hundreds of hours of work.
-	
+
 	Contributors: BACONMOP [AW], Razgriz33 [AW], Jester [AW], Kamaradski [AW], David [AW], chucky [allFPS].
-	
+
 	www.ahoyworld.co.uk
 	www.allfps.com.au
-	
+
 	Please be respectful and do not remove/alter credits.
-	
-File Reference: 
+
+File Reference:
 
 	https://community.bistudio.com/wiki/Description.ext
 */

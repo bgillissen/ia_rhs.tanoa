@@ -18,7 +18,11 @@ private ["_iamhelipilot"];
 waitUntil {!isNull player};
 waitUntil {player == player};
 
-if ( !isTFU ) then {
+private _uid = getPlayerUID player;
+					//AzE
+private _allowed = ["76561197960586000"];
+
+if ( !isTFU && !(_uid in _allowed) ) then {
 	private _helipilots = ["rhsusf_army_ocp_helipilot", "rhsusf_airforce_jetpilot"];
 	private _jetpilots = ["rhsusf_airforce_jetpilot", "rhsusf_army_ocp_helipilot"];
 	private _snipers = ["rhsusf_army_ocp_sniper"];

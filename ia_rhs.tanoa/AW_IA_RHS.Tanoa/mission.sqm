@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=19;
+		nextID=22;
 	};
 	class Camera
 	{
@@ -14203,6 +14203,7 @@ class Mission
 			};
 			id=1403;
 			type="Land_CampingTable_F";
+			atlOffset=-5.0544739e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14323,7 +14324,7 @@ class Mission
 			};
 			id=1405;
 			type="Land_Laptop_device_F";
-			atlOffset=0.0069608688;
+			atlOffset=0.0069408417;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14384,6 +14385,7 @@ class Mission
 			};
 			id=1406;
 			type="Land_CampingChair_V2_F";
+			atlOffset=6.6757202e-006;
 			class CustomAttributes
 			{
 				class Attribute0
